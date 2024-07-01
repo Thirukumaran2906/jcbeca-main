@@ -1,0 +1,67 @@
+.fileList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif; 
+
+}
+
+.fileBox {
+  background-image: url('../images/Logo.jpg');
+background-size: 100px;
+background-repeat: no-repeat;
+background-position:center;
+  width: 80%; 
+  max-height: flex;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s;
+  color: black;
+  font-family: Arial, sans-serif; 
+
+}
+
+.fileBox:hover {
+  transition: 1s;
+  transform: scale(1.02); 
+}
+
+.viewButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s; 
+  font-family: Arial, sans-serif; 
+
+}
+
+.viewButton:hover {
+  background-color: #0056b3; 
+}
+
+@media (max-width: 480px) {
+  .fileBox {
+    width: 100%;
+  }
+  
+  .fileBox p {
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  .viewButton {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,356 @@
+*{
+  text-align: justify;
+}
+h2{
+  text-decoration: underline;
+}
+h1{
+  text-decoration:underline;
+}
+
+.guidelinesBox {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    margin: 30px auto; 
+    max-width: 90%; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    text-align: justify;
+  }
+  
+  .guidelinesBox h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+  }
+  
+  .guidelinesBox p {
+    margin-bottom: 15px; 
+  }
+  
+  .guidelinesBox ul {
+    padding-left: 20px; 
+  }
+  
+  .guidelinesBox li {
+    list-style: disc; 
+    margin-bottom: 8px; 
+  }
+  
+
+
+  .submissionBox {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left; 
+  }
+  
+  .submissionBox h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px;
+  }
+  .submissionBox p {
+    margin-bottom: 8px; 
+}
+
+  @media (max-width: 480px) {
+    .submission-box {
+      font-size: 16px; 
+      padding: 20px;
+    }
+  }
+
+
+
+  .manuscript {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 30px auto; 
+  }
+  
+  .manuscript h2{
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+  }
+  .manuscript h3 {
+    font-size: 15px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+  }
+  
+  .manuscript ul {
+    list-style-type: none; 
+    padding: 0; 
+  }
+  
+  .manuscript ul li {
+    margin-bottom: 10px; 
+    list-style-type: square;
+  }
+  
+  .manuscript ul ul {
+    margin-left: 20px;
+  }
+  
+  
+
+  .titlePage{
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left; 
+}
+
+.titlePage h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.titlePage p {
+    margin-bottom: 8px; 
+}
+
+
+   .AuthourPage {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left;
+}
+
+.AuthourPage h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.AuthourPage p {
+    margin-bottom: 8px; 
+}
+
+
+   .AbstractPage {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left; 
+}
+
+.AbstractPage h1 {
+    font-size: 24px;
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.AbstractPage p {
+    margin-bottom: 8px; 
+}
+
+
+   .Keyword {
+    background-color: #f0f8ff;
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left; 
+}
+
+.Keyword  h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.Keyword p {
+    margin-bottom: 8px; 
+}
+
+.Keyword a {
+   color: red;
+}
+
+
+
+
+   .Literature {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left;
+}
+
+.Literature  h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.Literature p {
+    margin-bottom: 8px; 
+}
+
+
+   .Proposals {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left; 
+}
+
+.Proposals  h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+
+.Proposals p {
+    margin-bottom: 8px; 
+}
+
+
+   .Equations {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left; 
+}
+
+.Equations h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.Equations p {
+    margin-bottom: 8px; 
+}
+
+
+   .Figure {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto; 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.5; 
+    text-align: left;
+}
+
+.Figure h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.Figure p {
+    margin-bottom: 8px; 
+}
+
+   .Table{
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%; 
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5; 
+    text-align: left; 
+}
+
+.Table h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.Table p {
+    margin-bottom: 8px; 
+}
+
+
+.research {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    color: #03396c;
+  }
+  
+  .research section {
+    margin-bottom: 20px;
+  }
+  
+  .research h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+  }
+  
+  .research p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+  

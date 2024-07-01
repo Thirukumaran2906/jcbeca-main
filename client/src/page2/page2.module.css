@@ -1,0 +1,254 @@
+.boxStyle {
+    background-color: #f0f8ff;
+    color: #03396c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 90%; 
+    margin: 30px auto;
+    text-align: left;
+    line-height: 1.5; 
+    font-size: 18px;
+    border: 2px solid #b0e0e6;
+    text-align: justify;
+  }
+  
+  .boxStyle h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .boxStyle p {
+    margin-bottom: 10px;
+  }
+  
+  .boxStyle ul {
+    list-style-type: square;
+    padding-left: 20px; 
+    margin: 0; 
+  }
+  
+  .boxStyle ul li {
+    margin-bottom: 10px; 
+    word-wrap: break-word; 
+  }
+  .main-editorial {
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 480px) {
+    .boxStyle {
+      font-size: 13px;
+      padding: 20px; 
+      margin: 20px auto;
+    }
+    .boxStyle h2 {
+      font-size: 18px;
+    }
+    .boxStyle ul li {
+      margin-bottom: 8px; 
+      word-wrap: break-word; 
+    }
+  }
+
+
+  .editorBox {
+    background-color: #f0f8ff;
+    color: #03396c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 90%; 
+    margin: 30px auto;
+    text-align: justify; 
+    line-height: 1.4; 
+    font-size: 18px;
+    border: 2px solid #b0e0e6;
+    position: relative;
+  }
+  
+  .editorBox h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .editorBox img {
+    display: block;
+    margin: 60px auto 20px; 
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    border: 2px solid #b0e0e6; 
+  }
+  
+  .editorBox p {
+    text-align: justify;
+    margin: 0;
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 480px) {
+    .editorBox {
+      font-size: 13px;
+      padding: 20px; 
+      margin: 20px auto; 
+    }
+    .editorBox h2 {
+      font-size: 18px;
+    }
+    .editorBox img {
+      width: 150px; 
+      height: 150px; 
+    }
+  }
+  
+
+  .tableBox2 {
+    background-color: #f0f8ff;
+    color: #03396c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 30px auto;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 18px;
+    border: 2px solid #b0e0e6;
+    overflow-x: auto; 
+  }
+  
+  .tableBox2 h2 {
+    margin-bottom: 20px;
+  }
+  
+  .tableBox2 table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto; 
+  }
+  
+  .tableBox2 th, .tableBox2 td {
+    border: 1px solid #b0e0e6;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap; 
+  }
+  
+  .tableBox2 th {
+    background-color: #e0f7fa;
+    font-weight: bold;
+  }
+  
+  .tableBox2 tbody tr:nth-child(even) {
+    background-color: #eaf6ff;
+  }
+  
+  @media (max-width: 480px) {
+    .tableBox2 {
+      font-size: 13px;
+      padding: 20px;
+      margin: 20px auto;
+    }
+  }
+  
+
+
+
+  .joinBox {
+    background-color: #f0f8ff; 
+    color: #03396c; 
+    padding: 20px; 
+    margin: 30px auto; 
+    max-width: 90%; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    border: 1px solid #b0e0e6; 
+    text-align: left; 
+}
+
+.joinBox h3 {
+    color: #0276FD; 
+    font-size: 24px; 
+    margin-bottom: 15px; 
+}
+
+.joinBox p {
+    margin-bottom: 15px; 
+}
+
+.joinBox a {
+    color: #055B85;
+    text-decoration: none; 
+}
+
+.joinBox a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  width: 90%; 
+  height: 50px;
+  margin: 0 auto; 
+  background-color: #f0f8ff; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 10px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+  padding: 0; 
+}
+
+.header ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  width: 100%; 
+  justify-content: space-evenly; 
+  height: 100%; 
+}
+
+.header ul li {
+  flex-grow: 1; 
+  text-align: center; 
+}
+
+.header ul li a {
+  text-decoration: none; 
+  color: #03396c; 
+  font-size: 18px; 
+  line-height: 50px; 
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 50px; 
+  }
+  .header ul li a {
+    font-size: 12px; 
+  }
+}
