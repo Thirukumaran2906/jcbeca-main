@@ -24,14 +24,13 @@ app.use('/api/upload',uploadRoutes)
 app.use('/api/files',FileRoutes)
 app.use('/api/auth',AuthRoutes)
 
-if(process.env.NODE_ENV === "production") {
+
   app.use(express.static(path.join(__dirname,'../client/build')))
   app.get("*", (req, res) => {
     res.sendFile(
       path.join(path.resolve(__dirname, "../client/build/index.html"))
     );
   });
-}
 
 
 app.get("/", (req, res) => {
