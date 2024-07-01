@@ -12,7 +12,7 @@ const AuthRoutes = require('./routes/auth.routes')
 const app = express();
 const port = process.env.PORT || 8080;
 
-const dbURI = process.env.MONGO_URL;
+const dbURI = "mongodb+srv://thirukumaran2906:thiru@cluster-1.ezqm43h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-1/jcbeca";
 
 mongoose.connect(dbURI).then((result) => console.log('MongoDB connected'))
 
