@@ -12,7 +12,7 @@ const AuthRoutes = require('./routes/auth.routes')
 const app = express();
 const port = process.env.PORT || 8080;
 
-const dbURI = process.env.MONGO_URL || 'mongodb://localhost:27017/jcbeca';
+const dbURI = process.env.MONGO_URL;
 
 mongoose.connect(dbURI).then((result) => console.log('MongoDB connected'))
 
