@@ -16,11 +16,7 @@ const Login = () => {
     const token = await localStorage.getItem('token');
     if (token) {
       try {
-<<<<<<< HEAD
-        const response = await axios.get('http://3.93.68.228:8080/api/auth/check', {
-=======
         const response = await axios.get('https:3.93.68.228:8080/api/auth/check', {
->>>>>>> 0245300b072ca384b01c818d1d063daad482bc21
           headers: {
             Authorization: `Bearer ${token}`,
           },

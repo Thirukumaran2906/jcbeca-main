@@ -46,11 +46,7 @@ const UploadForm = () => {
       const currentMonth = Number(currentDate.getMonth() + 1);
 
       const response = await axios.post(
-<<<<<<< HEAD
         "http://3.93.68.228:8080/api/upload/get-signed-url",
-=======
-        "https://3.93.68.228:8080/api/upload/get-signed-url",
->>>>>>> 0245300b072ca384b01c818d1d063daad482bc21
         {
           file_name: file.name,
           Name: name,
