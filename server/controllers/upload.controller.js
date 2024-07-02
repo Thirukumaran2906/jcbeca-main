@@ -73,7 +73,7 @@ AWS.config.update({
         { Key : key }, 
         { $set: { isUploaded: true } } 
       );
-  
+      
       if (updatedTrue.modifiedCount > 0) {
         return res.json({
           success: true,
@@ -82,6 +82,7 @@ AWS.config.update({
       } else {
         return res.status(404).json({
           success: false,
+          
           message: 'Document not found'
         });
       }
