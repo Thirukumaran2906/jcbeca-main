@@ -23,7 +23,7 @@ app.use(cors())
 app.use('/api/upload',uploadRoutes)
 app.use('/api/files',FileRoutes)
 app.use('/api/auth',AuthRoutes)
-
+app.use(express.static(path.join(__dirname,'../client/src/images')))
 
   app.use(express.static(path.join(__dirname,'../client/build')))
   app.get("*", (req, res) => {
