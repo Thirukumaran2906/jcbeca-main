@@ -16,7 +16,7 @@ const Login = () => {
     const token = await localStorage.getItem('token');
     if (token) {
       try {
-        const response = await axios.get('https://localhost:8080/api/auth/check', {
+        const response = await axios.get('http://3.93.68.228:8080/api/auth/check', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    axios.post('http://54.80.252.150:8080/api/auth/login', { email, password })
+    axios.post('http://3.93.68.228:8080/api/auth/login', { email, password })
       .then(response => {
         const { token } = response.data;
         localStorage.setItem('token', token);

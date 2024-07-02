@@ -46,7 +46,7 @@ const UploadForm = () => {
       const currentMonth = Number(currentDate.getMonth() + 1);
 
       const response = await axios.post(
-        "https://54.80.252.150:8080/api/upload/get-signed-url",
+        "http://3.93.68.228:8080/api/upload/get-signed-url",
         {
           file_name: file.name,
           Name: name,
@@ -79,7 +79,7 @@ const UploadForm = () => {
       intervalRef.current = setInterval(async () => {
         try {
           const statusResponse = await axios.put(
-            "http://54.80.252.150:8080/api/upload/update-upload-status", { key : key}
+            "http://3.93.68.228:8080/api/upload/update-upload-status", { key : key}
           );
           console.log("Upload status:", statusResponse);
         } catch (statusError) {
