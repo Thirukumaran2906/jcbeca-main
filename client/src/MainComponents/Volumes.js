@@ -10,7 +10,7 @@ const Volumes = () => {
   useEffect(() => {
     const fetchFiles = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/files/volumes');
+        const response = await axios.get('3.93.68.228:8080/api/files/volumes');
         setFiles(response.data);
       } catch (err) {
         setError('Error fetching files');
