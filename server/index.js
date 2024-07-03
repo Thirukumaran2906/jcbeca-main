@@ -10,7 +10,7 @@ const uploadRoutes= require('./routes/upload.routes')
 const FileRoutes = require('./routes/GetFiles.routes')
 const AuthRoutes = require('./routes/auth.routes')
 const app = express();
-const port = process.env.PORT || 8080;
+const port = 80;
 
 const dbURI = "mongodb+srv://thirukumaran2906:thiru@cluster-1.ezqm43h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-1/jcbeca";
 
