@@ -10,7 +10,7 @@ const uploadRoutes= require('./routes/upload.routes')
 const FileRoutes = require('./routes/GetFiles.routes')
 const AuthRoutes = require('./routes/auth.routes')
 const app = express();
-const port = 8080;
+const port = 80;
 
 const dbURI =  process.env.MONGO_URL;
 
