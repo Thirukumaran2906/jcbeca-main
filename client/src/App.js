@@ -9,6 +9,8 @@ import AppCss from './App.module.css'
 import LogoHeader from './MainComponents/LogoHeader';
 import Volumes from './MainComponents/Volumes';
 import Login from './MainComponents/Login';
+import Issue from './MainComponents/Issue';
+import Manual from './MainComponents/Manual';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path='/main' element={<Main />} />
         <Route path='/volumes' element={<Volumes />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/issue' element={<Issue />} />
+        <Route path='/manual' element={<Manual />} />
       </Routes>
       </div>
       <Footer />

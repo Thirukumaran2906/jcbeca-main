@@ -17,19 +17,19 @@ function Table3() {
         <tbody>
           <tr>
             <td>1</td>
-            <td>John Doe</td>
-            <td>john.doe@example.com</td>
-            <td>123 Main St, City</td>
-            <td>USA</td>
+            <td>-------------</td>
+            <td>----------------</td>
+            <td>------------------</td>
+            <td>--------------------</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Jane Smith</td>
-            <td>jane.smith@example.com</td>
-            <td>456 Oak St, City</td>
-            <td>Canada</td>
+            <td>---------------</td>
+            <td>-------------------</td>
+            <td>--------------------</td>
+            <td>--------------</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>3</td>
             <td>Michael Johnson</td>
             <td>michael.johnson@example.com</td>
@@ -49,7 +49,7 @@ function Table3() {
             <td>david.brown@example.com</td>
             <td>202 Birch St, City</td>
             <td>India</td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
     </div>

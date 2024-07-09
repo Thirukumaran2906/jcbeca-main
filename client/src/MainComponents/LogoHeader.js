@@ -23,14 +23,14 @@ const LogoHeader = () => {
         <div class={logoCss.logo}></div>
         <div class={logoCss.content}>
             <h2 className={logoCss.h2}>Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA)</h2>
-            <h4 className={logoCss.h4}>(An ISO 9001:2015 Certified International Journal)</h4>
-            <p className={logoCss.p}>An International Peer Reviewed Journal for Science & Pharmacy Professional</p>
-            <p className={logoCss.p}>An Official Publication of Society for Advance Healthcare Research (Reg. No.: 01/01/01/31674/16)</p>
+            <h4 className={logoCss.h4}>(International Journal | Open Access | Double Blind Peer Reviewed | Call for Papers )</h4>
+            <p className={logoCss.p}> site is under Under Development</p>
+            <p className={logoCss.p}>site is under Under Development</p>
         </div>
         <div class={logoCss.badge}>
             <div class={logoCss.number}>
-                <h2 className={logoCss.h2}>ISSN xxxx-xxxx</h2>
-                <h3 className={logoCss.h2}>IMPACT FACTOR: 6.669</h3>
+                <h2 className={logoCss.h2}> E-ISSN xxxx-xxxx</h2>
+                <h3 className={logoCss.h2}>IMPACT FACTOR: 0.00</h3>
                 <p className={logoCss.h2}>{`${day}, ${month} ${dayOfMonth}, ${year} ${time}`}</p>
             </div>
             <div class={logoCss.logoBadge}></div>

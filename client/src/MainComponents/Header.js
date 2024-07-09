@@ -35,10 +35,10 @@ const Header = () => {
               <Link to="/main" onClick={closeMenu}>Instruction To Author</Link>
             </li>
             <li className="p-4 text-slate-500 hover:text-white">
-              <Link to="/catering" onClick={closeMenu}>Manuscript Submission</Link>
+              <Link to="/manual" onClick={closeMenu}>Manuscript Submission</Link>
             </li>
             <li className="p-4 text-slate-500 hover:text-white">
-              <Link to="/reserve" onClick={closeMenu}>Current Issue</Link>
+              <Link to="/issue" onClick={closeMenu}>Current Issue</Link>
             </li>
             <li className="p-4 text-slate-500 hover:text-white">
               <Link to="/volumes" onClick={closeMenu}>Volumes</Link>
