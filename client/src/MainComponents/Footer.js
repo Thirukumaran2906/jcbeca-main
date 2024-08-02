@@ -35,22 +35,22 @@ export const Footer = () => {
             <div className="flex">
               <p className="mr-1 text-gray-800">Phone:</p>
               <a
-                href="tel:9042118032"
+                href="tel:8610143762"
                 aria-label="Our phone"
                 title="Our phone"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                9042118032
+                +91 86101 43762
               </a>
             </div>
             <div className="flex">
               <p className="mr-1 text-gray-800">Email:</p>
               <a
-                href="mailto:thirukumaran2906@gmail.com"
+                href="mailto:admin@jcbeca.com"
                 aria-label="Our email"
                 title="Our email"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >JCBECA@gmail.com
+              >admin@jcbeca.com
               </a>
             </div>
             <div className="flex">
@@ -71,14 +71,16 @@ export const Footer = () => {
             <span className="text-base font-bold tracking-wide text-gray-900">
               Social
             </span>
-            <div className="flex items-center mt-1 space-x-3">
-             
+            <div className="flex items-center mt-1 space-x-3 ">
               <a
-                href="/"
+                href="https://www.linkedin.com/in/jcbeca-publications/"
+                target="_blank"
                 className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                <FaLinkedin />
+               <FaLinkedin style={{ color: '#0077b5' }} />
+                
               </a>
+              
             </div>
             <p className="mt-4 text-sm text-gray-500">
             This is an International online journal
@@ -87,7 +89,8 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
           <p className="text-sm text-gray-600">
-            Developed by Thirukumaran
+          <a href="https://www.linkedin.com/in/thirukumaran6/" target="_blank">Developed by Thirukumaran</a>
+            
           </p>
           <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
             <li>

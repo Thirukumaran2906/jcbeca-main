@@ -14,8 +14,6 @@ const Page2 = () => {
     <EditorDesk />
     <ChiefEditor />
       <TableComponent />
-      <Table3 />
-      <Table4 />
       <JoinBox />
     </div>
   )

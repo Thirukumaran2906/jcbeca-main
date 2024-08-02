@@ -1,23 +1,26 @@
 import React from 'react';
 import CSS from './page2.module.css'
-import Logo from '../images/Logo.jpg'
 
 function ChiefEditor() {
   return (
-    <div className={CSS.editorBox} id='members'>
+    <div className={CSS.boxStyle} id='desk'>
       <h2>Chief Editor</h2>
-      <img src={Logo} alt="Chief Editor" />
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+        <strong>Dr. KARTHIKEYAN M V</strong> 
       </p>
-      <p>
-        Cras venenatis euismod malesuada. Nullam ac erat ante. Quisque non odio lectus.
-      </p>
-      <p>
-        Sed sit amet arcu eget ipsum faucibus efficitur non sed justo.
-      </p>
+      
+        <p>
+          Wireless Communication, Bio-Medical Devices, Device Security and Cyber security
+          <br />
+          Associate Professor
+          <br />
+          St.Joseph's Institute of Technology, OMR, Chennai -600119
+        </p>
+      
+      
     </div>
   );
 }
 
 export default ChiefEditor;
+

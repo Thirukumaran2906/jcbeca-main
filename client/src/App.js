@@ -11,11 +11,15 @@ import Volumes from './MainComponents/Volumes';
 import Login from './MainComponents/Login';
 import Issue from './MainComponents/Issue';
 import Manual from './MainComponents/Manual';
+import DocumentDetails from './MainComponents/DocumentDetails';
+import ContactUs from './MainComponents/ContactUs';
+import EthicalPage from './EthicalsFolder/EthicalPage';
+import ViewPapersAdmin from './MainComponents/ViewPapersAdmin';
+import ThankYou from './MainComponents/ThankYou';
+
 
 
 function App() {
-
-
   return (
     <div> 
     <LogoHeader />
@@ -25,10 +29,13 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/authour' element={ <Page2 />} />
         <Route path='/main' element={<Main />} />
-        <Route path='/volumes' element={<Volumes />} />
+        <Route path='/archives' element={<Volumes />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/issue' element={<Issue />} />
         <Route path='/manual' element={<Manual />} />
+        <Route path='/ethics' element={<EthicalPage />} />
+        <Route path='/contact' element={<ContactUs />} />
+        <Route path="/documents/:volumeNumber/:issue" element={<DocumentDetails />} />
+        <Route path="/thank" element={<ThankYou />} />
       </Routes>
       </div>
       <Footer />

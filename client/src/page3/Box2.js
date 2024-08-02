@@ -6,7 +6,7 @@ function Box2() {
     <div className={Design.submissionBox}>
       <h2>Manuscript Submission</h2>
       <p>All correspondence is done through e-mail. All submissions must be in English and each manuscript will be provided with a manuscript ID.</p>
-      <p>In case of any problem with online submission, submit manuscripts to our mail: <a href="mailto:editor.jcbeca@gmail.com">editor.jcbeca@gmail.com</a> with a covering letter, preferably by the corresponding author.</p>
+      <p>In case of any problem with online submission, submit manuscripts to our mail: <a href="mailto:admin@jcbeca.com"><strong>admin@jcbeca.com</strong></a> with a brief description about the work , preferably by the corresponding author.</p>
     </div>
   );
 }

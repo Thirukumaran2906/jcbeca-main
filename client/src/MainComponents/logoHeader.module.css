@@ -1,6 +1,6 @@
 .outerLogo {
-    font-family:sans-serif;
-    background-color:  #3944a7;
+    font-family: sans-serif;
+    background-color: #1A3E7A ;
     width: 100%;
     color: black;
     display: flex;
@@ -11,63 +11,62 @@
     gap: 10px;
 }
 
-.content h2{
-    font-weight: 600;
+.content h1 {
+    font-weight: 800;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+}
+
+.h4, .p {
+    font-weight: 400;
+    font-size: medium;
+    text-align: center;
+    color: white;
+}
+
+.h2 {
+    font-weight: 400;
+    font-size: medium;
+    text-align: center;
+    color: white;
+}
+.h2logo {
+    
     font-size: larger;
     text-align: center;
-    color:white ;
-
+    color: white;
 }
-.h4 ,.p{
-    font-weight: 400;
-    font-size: medium;
-    text-align: center;
-    color:white ;
-}
-
-.h2{
-    font-weight: 400;
-    font-size: medium;
-    text-align: center;
-    color:white ;
-}
-
-
-
 
 .content, .badge {
     padding: 5px;
     flex: 1;
-    min-width: 200px; 
+    min-width: 200px;
     box-sizing: border-box;
 }
 
 .logo {
     padding: 5px;
     flex: 1;
-    min-width: 250px; 
-    min-height: 200px;
+    min-width: 200px;
+    min-height: 150px;
     box-sizing: border-box;
-    background-image: url('../images/Logo.jpg');
+    background-image: url('../images/new-jcbeca-logo.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .content {
-    min-height: 200px;
+    min-height: 150px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 2px;
-    flex: 2; 
+    flex: 2;
 }
-/* 
- .content h1,h4,p {
-    margin-top: 3px;
- } */
 
 .badge {
     display: flex;
@@ -81,38 +80,30 @@
     flex: 1;
 }
 
-.logoBadge {
-    width: 100px;
-    height: 100px;
-    background-image: url('../images/Logo.jpg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 @media (max-width: 768px) {
     .h2 {
         font-size: 11px;
     }
-    .h4 ,.p{
+
+    .h4, .p {
         font-weight: 300;
         font-size: 13px;
-       
     }
-
 
     .content h2 {
         font-size: 17px;
     }
-    .content h4,p {
+
+    .content h4, p {
         font-size: 15px;
-     }
+    }
+
     .badge {
         flex-direction: column;
         height: auto;
     }
 
-    .logo, .logoBadge {
+    .logo {
         width: 100%;
         height: 100px;
     }
@@ -120,8 +111,8 @@
     .content, .number {
         width: 100%;
     }
-    .number h2,h3,p{
+
+    .number h2, h3, p {
         font-size: 15px;
-         
     }
 }

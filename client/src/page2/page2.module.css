@@ -1,6 +1,7 @@
+
 .boxStyle {
-    background-color: #f0f8ff;
-    color: #03396c;
+    background-color: #03396c;
+    color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -11,6 +12,8 @@
     font-size: 18px;
     border: 2px solid #b0e0e6;
     text-align: justify;
+    border: 4px solid gold;
+
   }
   
   .boxStyle h2 {
@@ -54,8 +57,8 @@
 
 
   .editorBox {
-    background-color: #f0f8ff;
-    color: #03396c;
+    background-color:#03396c;
+    color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -66,6 +69,7 @@
     font-size: 18px;
     border: 2px solid #b0e0e6;
     position: relative;
+    border: 4px solid gold;
   }
   
   .editorBox h2 {
@@ -79,11 +83,21 @@
   
   .editorBox img {
     display: block;
-    margin: 60px auto 20px; 
+    margin: 60px auto 10px; 
     width: 200px; 
     height: 200px; 
     border-radius: 10px; 
     border: 2px solid #b0e0e6; 
+  }
+  
+  .editorName {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .editorDetails {
+    margin-top: 20px;
   }
   
   .editorBox p {
@@ -105,95 +119,189 @@
       width: 150px; 
       height: 150px; 
     }
+    .editorName {
+      font-size: 15px;
+    }
   }
   
-
   .tableBox2 {
     background-color: #f0f8ff;
     color: #03396c;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     max-width: 90%;
-    margin: 30px auto;
+    margin: 20px auto;
     text-align: left;
     line-height: 1.4;
     font-size: 18px;
     border: 2px solid #b0e0e6;
-    overflow-x: auto; 
-  }
-  
-  .tableBox2 h2 {
-    margin-bottom: 20px;
-  }
-  
-  .tableBox2 table {
+    overflow-x: auto;
+    border: 4px solid gold;
+}
+
+.tableBox2 h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #0276FD;
+}
+
+.tableBox2 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    table-layout: auto; 
-  }
-  
-  .tableBox2 th, .tableBox2 td {
+    margin-top: 15px;
+    table-layout: auto;
+}
+
+.tableBox2 th, .tableBox2 td {
     border: 1px solid #b0e0e6;
     padding: 12px;
     text-align: left;
-    white-space: nowrap; 
-  }
-  
-  .tableBox2 th {
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.tableBox2 th {
     background-color: #e0f7fa;
     font-weight: bold;
-  }
-  
-  .tableBox2 tbody tr:nth-child(even) {
+    font-size: 17px;
+}
+
+.tableBox2 tbody tr:nth-child(even) {
     background-color: #eaf6ff;
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 1024px) {
     .tableBox2 {
-      font-size: 13px;
-      padding: 20px;
-      margin: 20px auto;
+        font-size: 16px;
+        padding: 15px;
     }
-  }
-  
+
+    .tableBox2 h2 {
+        font-size: 22px;
+    }
+
+    .tableBox2 th, .tableBox2 td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tableBox2 {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .tableBox2 h2 {
+        font-size: 20px;
+    }
+
+    .tableBox2 th, .tableBox2 td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tableBox2 {
+        font-size: 14px;
+        padding: 8px;
+        margin: 10px auto;
+    }
+
+    .tableBox2 h2 {
+        font-size: 18px;
+    }
+
+    .tableBox2 th, .tableBox2 td {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
 
 
 
-  .joinBox {
-    background-color: #f0f8ff; 
-    color: #03396c; 
-    padding: 20px; 
-    margin: 30px auto; 
-    max-width: 90%; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    font-family: Arial, sans-serif; 
-    line-height: 1.6; 
-    border: 1px solid #b0e0e6; 
-    text-align: left; 
+.joinBox {
+  background-color: #f0f8ff; 
+  color: #03396c; 
+  padding: 20px; 
+  margin: 30px auto; 
+  max-width: 90%; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  border: 1px solid #b0e0e6; 
+  text-align: left; 
+  border: 4px solid gold;
 }
 
 .joinBox h3 {
-    color: #0276FD; 
-    font-size: 24px; 
-    margin-bottom: 15px; 
+  color: #0276FD; 
+  font-size: 24px; 
+  margin-bottom: 15px; 
 }
 
 .joinBox p {
-    margin-bottom: 15px; 
+  margin-bottom: 15px; 
 }
 
 .joinBox a {
-    color: #055B85;
-    text-decoration: none; 
+  color: #055B85;
+  text-decoration: none; 
 }
 
 .joinBox a:hover {
-    text-decoration: underline; 
+  text-decoration: underline; 
 }
 
+.downloadButton {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.downloadButton:hover {
+  background-color: darkred;
+}
+
+@media (max-width: 768px) {
+  .joinBox {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .joinBox h3 {
+    font-size: 22px;
+  }
+
+  .downloadButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .joinBox {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .joinBox h3 {
+    font-size: 20px;
+  }
+
+  .downloadButton {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
 
 
 
@@ -220,6 +328,8 @@
   border-radius: 10px; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
   padding: 0; 
+  border: 4px solid gold;
+
 }
 
 .header ul {
@@ -252,3 +362,105 @@
     font-size: 12px; 
   }
 }
+
+
+
+
+
+
+
+/*sample code for table 
+
+/* 
+.tableBox2 {
+  background-color: #f0f8ff;
+  color: #03396c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  line-height: 1.4;
+  font-size: 18px;
+  border: 2px solid #b0e0e6;
+  overflow-x: auto;
+  border: 4px solid gold;
+}
+
+.tableBox2 h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.tableBox2 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  table-layout: auto;
+}
+
+.tableBox2 th, .tableBox2 td {
+  border: 1px solid #b0e0e6;
+  padding: 12px;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 16px;
+  background-color: #03396c;
+  color: white;
+}
+
+.tableBox2 th {
+  background-color: #03396c;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+@media (max-width: 1024px) {
+  .tableBox2 {
+      font-size: 16px;
+      padding: 15px;
+  }
+
+  .tableBox2 h2 {
+      font-size: 22px;
+  }
+
+  .tableBox2 th, .tableBox2 td {
+      padding: 10px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableBox2 {
+      font-size: 15px;
+      padding: 10px;
+  }
+
+  .tableBox2 h2 {
+      font-size: 20px;
+  }
+
+  .tableBox2 th, .tableBox2 td {
+      padding: 8px;
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableBox2 {
+      font-size: 14px;
+      padding: 8px;
+      margin: 10px auto;
+  }
+
+  .tableBox2 h2 {
+      font-size: 18px;
+  }
+
+  .tableBox2 th, .tableBox2 td {
+      padding: 6px;
+      font-size: 12px;
+  }
+} */

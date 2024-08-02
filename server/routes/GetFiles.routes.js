@@ -4,7 +4,7 @@ const router = express.Router();
 const { GetAllFiles } = require('../controllers/getFiles.controller')
 
 
-router.get('/volumes', GetAllFiles);
+router.post('/volumes', GetAllFiles);
 
 
 

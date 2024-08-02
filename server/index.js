@@ -9,6 +9,7 @@ dotenv.config();
 const uploadRoutes= require('./routes/upload.routes')
 const FileRoutes = require('./routes/GetFiles.routes')
 const AuthRoutes = require('./routes/auth.routes')
+const UserUpload = require('./routes/userUpload.routes')
 const app = express();
 const port = 8080;
 
@@ -23,6 +24,7 @@ app.use(cors())
 app.use('/api/upload',uploadRoutes)
 app.use('/api/files',FileRoutes)
 app.use('/api/auth',AuthRoutes)
+app.use('/api/user/upload',UserUpload)
 app.use(express.static(path.join(__dirname,'../client/src/images')))
 app.use(express.static(path.join(__dirname,'../client/build/static/js')))
 

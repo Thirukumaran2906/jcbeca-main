@@ -1,11 +1,15 @@
 *{
     margin: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    font-size: 18px;
+
 }
+
 
 .App {
 
-    background-color: #3944a7; 
+    background-color: #1A3E7A ; 
     padding: 50px; 
     color: #FFFFFF; 
     min-height: 100vh; 
@@ -20,5 +24,17 @@
     .App {
       font-size: 12px; 
       padding: 10px;
+    }
+  }
+
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    color: gold;
+  }
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 2px; /* Adjust as needed for mobile screens */
     }
   }

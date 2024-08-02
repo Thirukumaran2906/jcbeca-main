@@ -1,0 +1,62 @@
+  .boxStyle {
+    background-color: #03396c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 30px auto;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 18px;
+    text-align: justify;
+    border: 4px solid gold;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .textContainer {
+    overflow: hidden;
+  }
+  
+  .boxStyle h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 480px) {
+    .boxStyle {
+      font-size: 13px;
+      padding: 20px;
+      margin: 20px auto;
+    }
+  }
+  
+
+  .listStyle {
+     margin: 3px 0;
+    padding :5px 0;
+    font-weight: bold;
+    color: white;
+    list-style-type :circle;
+  }
+  .highlightStyle{
+    font-weight: bold;
+    color:white;
+    text-decoration: underline;
+  }
+
+  .footerStyle  {
+   margin-top: 20px;
+    font-weight: bold;
+    color: white;
+  };
+
+  .spanTxt {
+    color:greenyellow
+  }
+  .money{
+    font-weight: bold;
+    color: greenyellow;
+    text-decoration: underline;
+  }

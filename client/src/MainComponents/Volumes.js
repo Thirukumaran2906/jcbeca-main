@@ -1,60 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import VolCss from './Volume.module.css'; 
+import React, { useState } from 'react';
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 const Volumes = () => {
-  const [files, setFiles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const volumeData = [
+    { volumeNumber: 1, volumeName: 'Volume 1', issues: ['Issue 1', 'Issue 2', 'Issue 3', 'Issue 4'] }
+  ];
 
-  useEffect(() => {
-    const fetchFiles = async () => {
-      try {
-        const response = await axios.get('http://3.93.68.228:8080/api/files/volumes');
-        setFiles(response.data);
-      } catch (err) {
-        setError('Error fetching files');
-      } finally {
-        setLoading(false);
-      }
-    };
+  const [expandedVolume, setExpandedVolume] = useState(null);
 
-    fetchFiles();
-  }, []);
-  if (files.length===0) {
-    return <div>Files will uploaded Soon</div>;
-  }
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  
-  if (error) {
-    return <div>{error}</div>;
-  }
+  const toggleVolume = (volumeName) => {
+    setExpandedVolume(expandedVolume === volumeName ? null : volumeName);
+  };
 
   return (
-    <div>
-      <h1>File Summaries</h1>
-      <details>
-        <summary>Volume 1</summary>
-        {files.length === 0 ? (
-          <p>No files found</p>
-        ) : (
-          <div className={VolCss.fileList}>
-            {files.map((file) => (
-              <div key={file._id} className={VolCss.fileBox}>
-                <p><strong>Name:</strong> {file.Name}</p>
-                <p><strong>Topic:</strong> {file.Topic}</p>
-                <p><strong>Date Uploaded</strong> {file.Date}/{file.Month}/{file.Year}</p>
-                <a href={file.S3Link} target="_blank" rel="noopener noreferrer">
-                  <button className={VolCss.viewButton}>View File</button>
-                </a>
+    <div className="container mx-auto mt-8">
+      <h1 className="text-3xl font-bold mb-8 text-center">Volumes</h1>
+      {volumeData.map((volume, index) => (
+        <div key={index} className="mb-4">
+          <div
+            className={`bg-yellow-300 rounded-lg overflow-hidden shadow-md transition-height duration-300 ${
+              expandedVolume === volume.volumeName ? 'h-auto' : 'h-16'
+            }`}
+          >
+            <div
+              className="p-4 cursor-pointer flex justify-between items-center"
+              onClick={() => toggleVolume(volume.volumeName)}
+            >
+              <h2 className="text-lg font-semibold text-black">{volume.volumeName}</h2>
+              <div className={`transform ${expandedVolume === volume.volumeName ? 'rotate-180' : ''}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={expandedVolume === volume.volumeName ? 'M19 9l-7 7-7-7' : 'M9 5l7 7-7 7'}
+                  />
+                </svg>
               </div>
-            ))}
+            </div>
+            {expandedVolume === volume.volumeName && (
+              <ul className="p-4">
+                {volume.issues.map((issue, issueIndex) => (
+                  <li key={issueIndex} className="text-base text-gray-800 flex items-center">
+                    <div className="w-4 h-4 mr-2">
+                      <IoMdArrowRoundForward />
+                    </div>
+                    <a
+                      href={`/documents/${volume.volumeNumber}/${issueIndex + 1}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-600"
+                    >
+                      {issue}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-        )}
-      </details>
+        </div>
+      ))}
     </div>
   );
 };

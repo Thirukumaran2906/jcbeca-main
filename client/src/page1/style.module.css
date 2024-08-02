@@ -2,57 +2,66 @@
     margin: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+.boxStyle {
+  background-color:  #03396c;
+  color: #03396c;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 30px auto;
+  text-align: left;
+  line-height: 1.4;
+  font-size: 18px;
+  text-align: justify;
+  border: 2px solid #b0e0e6;
+  overflow: hidden; 
+  border: 4px solid gold;
+  color: white;
+}
 
+.imageContainer {
+  float: left;
+  margin-right: 20px; 
+  
+}
+
+.imageContainer img {
+  width: 300px; 
+  height: 350px;
+}
+
+.textContainer {
+  overflow: hidden; 
+}
+
+.boxStyle h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
   .boxStyle {
-    background-color: #f0f8ff;
-    color: #03396c;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-width: 90%; 
-    margin: 30px auto;
-    text-align: left;
-    line-height: 1.4;
-    font-size: 18px;
-    text-align: justify;
-    border: 2px solid #b0e0e6;
+    font-size: 13px;
+    padding: 20px;
+    margin: 20px auto;
   }
-  
-  .boxStyle h2 {
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 700;
+  .imageContainer {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px; 
+    text-align: center;
   }
-  
-  .boxStyle ul {
-    list-style-type: square;
-    padding-left: 20px; 
-    margin: 0; 
+  .imageContainer img {
+    width: 100%; 
+    height: auto;
   }
-  
-  .boxStyle ul li {
-    margin-bottom: 10px; 
-    word-wrap: break-word; 
-  }
-  
-  @media (max-width: 480px) {
-    .boxStyle {
-      font-size: 13px;
-      padding: 20px; 
-      margin: 20px auto; 
-    }
-    .boxStyle h2 {
-      font-size: 18px;
-    }
-    .boxStyle ul li {
-      margin-bottom: 8px; 
-      word-wrap: break-word; 
-    }
-  }
-  
+}
+
 
   .visionBox {
-    background-color: #f0f8ff; 
+    background-color: #03396c; 
     color: #03396c;
     padding: 30px; 
     border-radius: 10px; 
@@ -64,18 +73,21 @@
     font-size: 18px; 
     border: 2px solid #b0e0e6; 
     text-align: justify;
+    border: 4px solid gold;
+    color: white;
+
   }
   
   .visionBox h2 {
     margin-bottom: 10px;
     font-size: 25px;
     font-weight: 700;
-    color: #0276FD;
+    color: gold;
   }
   
   .visionBox h3 {
     font-weight:500 ;
-    color: black;
+    color:gold;
   }
   
   .visionBox ul {
@@ -114,7 +126,7 @@
   }
   
   .featuresBox {
-    background-color: #f0f8ff; 
+    background-color: #03396c; 
     color: #03396c; 
     padding: 30px; 
     border-radius: 10px; 
@@ -126,13 +138,16 @@
     font-size: 18px; 
     border: 2px solid #b0e0e6; 
     text-align: justify;
+    border: 4px solid gold;
+    color:white;
+
   }
   
   .featuresBox h2 {
     margin-bottom: 10px;
     font-size: 25px;
     font-weight: 700;
-    color: #0276FD; 
+    color: white; 
   }
   
   .featuresBox ul {
@@ -156,18 +171,18 @@
 
   .tableBox {
     font-size: 18px;
-    background-color: #f0f8ff; 
-    color: #03396c; 
+    background-color: #03396c; 
     padding: 30px;
     border-radius: 10px; 
     box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
     margin-bottom: 30px;
     line-height: 1.8; 
     text-align: justify;
-
+    border: 4px solid gold;
+    color:white;
   }
   .tableBox h2 {
-    color: #0276FD;
+    color:white;
     font-size: 24px;
   }
   .tableStyle {
@@ -185,7 +200,7 @@
   
   .tdStyle {
     border: 1px solid #ddd; 
-    padding: 10px; 
+    padding: 20px; 
     text-align: left; 
   }
   .tableBox ul li{
@@ -222,4 +237,49 @@
       border-bottom: none; 
     }
   }
-  
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #03396c;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 30px auto;
+  border: 4px solid gold;
+  color: white;
+  overflow: hidden;
+}
+
+/* Base Styles for Box */
+.box {
+  flex: 1;
+  margin: 0 10px;
+  text-align: justify;
+  line-height: 1.4;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid gold;
+}
+
+/* Base Styles for Heading */
+.heading {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .box {
+    margin: 10px 0;
+  }
+}

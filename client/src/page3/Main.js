@@ -17,7 +17,6 @@ import Websites from './Websites'
 import Communication from './Communication'
 import Review from './Review'
 import Malpractice from './Malpractice'
-import Ethical from './Ethical'
 import Symbols from './Symbols'
 
 const Main = () => {
@@ -41,7 +40,6 @@ const Main = () => {
       <Communication />
       <Review />
       <Malpractice />
-      <Ethical />
       <Symbols />
     </div>
   )

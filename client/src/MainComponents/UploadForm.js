@@ -3,13 +3,12 @@ import axios from "axios";
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
-  const [name, setName] = useState("");
-  const [topic, setTopic] = useState("");
+  const [issue, setIssue] = useState("");
   const [volume, setVolume] = useState("");
+  const [paperId, setPaperId] = useState("");
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
-  const [polling, setPolling] = useState(false);
   const intervalRef = useRef(null);
 
   const handleFileChange = (e) => {
@@ -18,20 +17,20 @@ const UploadForm = () => {
     setFile(selectedFile);
   };
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleTopicChange = (e) => {
-    setTopic(e.target.value);
+  const handleIssueChange = (e) => {
+    setIssue(e.target.value);
   };
 
   const handleVolumeChange = (e) => {
     setVolume(e.target.value);
   };
 
+  const handlePaperIdChange = (e) => {
+    setPaperId(e.target.value);
+  };
+
   const handleUpload = async () => {
-    if (!file || !name || !topic || !volume) {
+    if (!file || !issue || !volume || !paperId) {
       setError("All fields are required");
       return;
     }
@@ -42,23 +41,20 @@ const UploadForm = () => {
 
     try {
       const currentDate = new Date();
-      const currentYear = Number(currentDate.getFullYear());
-      const currentMonth = Number(currentDate.getMonth() + 1);
+      const currentYear = currentDate.getFullYear();
+      const currentMonth = currentDate.getMonth() + 1;
 
       const response = await axios.post(
         "http://3.93.68.228:8080/api/upload/get-signed-url",
         {
           file_name: file.name,
-          Name: name,
-          Topic: topic,
-          Volume: volume,
-          Date: Number(currentDate.getDate()),
+          Issue: parseInt(issue, 10),
+          Volume: parseInt(volume, 10),
+          Date: currentDate.getDate(),
           Month: currentMonth,
           Year: currentYear,
         }
       );
-
-      console.log("Response from get-url:", response);
 
       if (response.status !== 200 || !response.data) {
         setError("Failed to get signed URL, received unexpected response");
@@ -74,12 +70,11 @@ const UploadForm = () => {
         return;
       }
 
-      console.log("Signed URL:", signedURL);
-
       intervalRef.current = setInterval(async () => {
         try {
           const statusResponse = await axios.put(
-            "http://3.93.68.228:8080/api/upload/update-upload-status", { key : key}
+            "http://3.93.68.228:8080/api/upload/update-upload-status",
+            { key }
           );
           console.log("Upload status:", statusResponse);
         } catch (statusError) {
@@ -87,7 +82,7 @@ const UploadForm = () => {
         }
       }, 1000);
 
-      const uploadPdf = await axios.put(signedURL, file, {
+      await axios.put(signedURL, file, {
         headers: {
           "Content-Type": "application/pdf",
         },
@@ -95,14 +90,23 @@ const UploadForm = () => {
 
       clearInterval(intervalRef.current);
 
-      setName("");
+      await axios.put(
+        "http://localhost:8080/api/user/upload/update-upload-document",
+        {
+          Paper_Id: paperId,
+          Volume: parseInt(volume, 10),
+          Issue: parseInt(issue, 10),
+          FileName: file.name,
+        }
+      );
+
       setFile(null);
-      setTopic("");
+      setIssue("");
       setVolume("");
+      setPaperId("");
       setUploading(false);
       setSuccess(true);
       setError(null);
-      setPolling(false);
       console.log("File uploaded successfully!");
     } catch (err) {
       clearInterval(intervalRef.current);
@@ -125,20 +129,20 @@ const UploadForm = () => {
       <div className="w-full max-w-md">
         <input
           type="text"
-          placeholder="Name"
-          value={name}
-          onChange={handleNameChange}
+          placeholder="Paper Id"
+          value={paperId}
+          onChange={handlePaperIdChange}
           className="text-md font-semibold bg-yellow-300 rounded-lg p-2 mb-4 w-full"
         />
         <input
-          type="text"
-          placeholder="Topic"
-          value={topic}
-          onChange={handleTopicChange}
+          type="number"
+          placeholder="Issue"
+          value={issue}
+          onChange={handleIssueChange}
           className="text-md font-semibold bg-yellow-300 rounded-lg p-2 mb-4 w-full"
         />
         <input
-          type="text"
+          type="number"
           placeholder="Volume"
           value={volume}
           onChange={handleVolumeChange}
@@ -157,10 +161,7 @@ const UploadForm = () => {
           {uploading ? "Uploading..." : "Upload File"}
         </button>
         {error && <p className="text-red-500 mt-2">{error}</p>}
-        {polling && <p className="text-blue-500 mt-2">...</p>}
-        {success && !polling && (
-          <p className="text-green-500 mt-2 text-lg">File uploaded successfully!</p>
-        )}
+        {success && <p className="text-green-500 mt-2 text-lg">File uploaded successfully!</p>}
       </div>
     </div>
   );
