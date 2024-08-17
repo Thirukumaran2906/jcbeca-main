@@ -7,7 +7,7 @@ const ViewPapersAdmin = () => {
   useEffect(() => {
     const fetchPapers = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/user/upload/get-journal-user');
+        const response = await axios.get('https://jcbeca.com/api/user/upload/get-journal-user');
         setPapers(response.data);
       } catch (error) {
         console.error('Error fetching papers:', error);

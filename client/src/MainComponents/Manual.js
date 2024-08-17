@@ -13,14 +13,7 @@ const SubmissionForm = () => {
     application: '',
     paperType: '',
     filename: '',
-    authors: [
-      { name: '', email: '', department: '', institution: '', country: '' },
-      { name: '', email: '', department: '', institution: '', country: '' },
-      { name: '', email: '', department: '', institution: '', country: '' },
-      { name: '', email: '', department: '', institution: '', country: '' },
-      { name: '', email: '', department: '', institution: '', country: '' },
-      { name: '', email: '', department: '', institution: '', country: '' }
-    ],
+    author: { name: '', email: '', department: '', institution: '', country: '' },
     correspondingAuthor: {
       contactNo: '',
       addressLine1: '',
@@ -51,10 +44,8 @@ const SubmissionForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleAuthorChange = (index, field, value) => {
-    const newAuthors = [...formData.authors];
-    newAuthors[index] = { ...newAuthors[index], [field]: value };
-    setFormData({ ...formData, authors: newAuthors });
+  const handleAuthorChange = (field, value) => {
+    setFormData({ ...formData, author: { ...formData.author, [field]: value } });
   };
 
   const handleCorrespondingAuthorChange = (e) => {
@@ -75,10 +66,11 @@ const SubmissionForm = () => {
     e.preventDefault();
 
     try {
-      const formDataToSend = { ...formData };
+      const uuid = `jcbeca${Math.floor(Math.random() * 9000000000) + 1000000000}`;
+      const formDataToSend = { ...formData,uuid };
 
-      const response = await axios.post('http://localhost:8080/api/user/upload/user-get-signed-url', formDataToSend);
-
+      const response = await axios.post('https://jcbeca.com/api/user/upload/user-get-signed-url', formDataToSend);
+      console.log(uuid);
       if (response.status !== 200 || !response.data) {
         console.log("Failed to get signed URL, received unexpected response");
         return;
@@ -92,6 +84,9 @@ const SubmissionForm = () => {
       });
 
       setIsThankYouVisible(true);
+      const To = formDataToSend.author.email
+      console.log(To)
+      await axios.post('https://jcbeca.com/api/user/upload/response-email-user',{To,uuid});
       console.log('Form data submitted:', formDataToSend);
     } catch (error) {
       console.error('Error submitting form data:', error);
@@ -108,14 +103,7 @@ const SubmissionForm = () => {
       application: '',
       paperType: '',
       filename: '',
-      authors: [
-        { name: '', email: '', department: '', institution: '', country: '' },
-        { name: '', email: '', department: '', institution: '', country: '' },
-        { name: '', email: '', department: '', institution: '', country: '' },
-        { name: '', email: '', department: '', institution: '', country: '' },
-        { name: '', email: '', department: '', institution: '', country: '' },
-        { name: '', email: '', department: '', institution: '', country: '' }
-      ],
+      author: { name: '', email: '', department: '', institution: '', country: '' },
       correspondingAuthor: {
         contactNo: '',
         addressLine1: '',
@@ -222,52 +210,47 @@ const SubmissionForm = () => {
           <label>Upload File</label>
           <input type="file" onChange={handleFileChange} required />
 
-          <h3>Authors</h3>
-          <div className={formCSS.authors_container}>
-            {formData.authors.map((author, index) => (
-              <div key={index} className={formCSS.author_field}>
-                <h4>Author {index + 1}</h4>
-                <label>Name*</label>
-                <input
-                  type="text"
-                  value={author.name}
-                  onChange={(e) => handleAuthorChange(index, 'name', e.target.value)}
-                  required
-                />
+          <h3>Author</h3>
+          <div className={formCSS.author_field}>
+            <label>Name*</label>
+            <input
+              type="text"
+              value={formData.author.name}
+              onChange={(e) => handleAuthorChange('name', e.target.value)}
+              required
+            />
 
-                <label>Email*</label>
-                <input
-                  type="email"
-                  value={author.email}
-                  onChange={(e) => handleAuthorChange(index, 'email', e.target.value)}
-                  required
-                />
+            <label>Email*</label>
+            <input
+              type="email"
+              value={formData.author.email}
+              onChange={(e) => handleAuthorChange('email', e.target.value)}
+              required
+            />
 
-                <label>Department*</label>
-                <input
-                  type="text"
-                  value={author.department}
-                  onChange={(e) => handleAuthorChange(index, 'department', e.target.value)}
-                  required
-                />
+            <label>Department*</label>
+            <input
+              type="text"
+              value={formData.author.department}
+              onChange={(e) => handleAuthorChange('department', e.target.value)}
+              required
+            />
 
-                <label>Institution*</label>
-                <input
-                  type="text"
-                  value={author.institution}
-                  onChange={(e) => handleAuthorChange(index, 'institution', e.target.value)}
-                  required
-                />
+            <label>Institution*</label>
+            <input
+              type="text"
+              value={formData.author.institution}
+              onChange={(e) => handleAuthorChange('institution', e.target.value)}
+              required
+            />
 
-                <label>Country*</label>
-                <input
-                  type="text"
-                  value={author.country}
-                  onChange={(e) => handleAuthorChange(index, 'country', e.target.value)}
-                  required
-                />
-              </div>
-            ))}
+            <label>Country*</label>
+            <input
+              type="text"
+              value={formData.author.country}
+              onChange={(e) => handleAuthorChange('country', e.target.value)}
+              required
+            />
           </div>
 
           <h3>Corresponding Author Details</h3>

@@ -1,6 +1,6 @@
 .outerLogo {
     font-family: sans-serif;
-    background-color: #1A3E7A ;
+    background-color: #003366;
     width: 100%;
     color: black;
     display: flex;
@@ -22,7 +22,7 @@
     font-weight: 400;
     font-size: medium;
     text-align: center;
-    color: white;
+    color:aquamarine;
 }
 
 .h2 {

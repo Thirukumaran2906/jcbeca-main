@@ -2,14 +2,12 @@
     margin: 0;
     font-family:'Times New Roman', Times, serif;
     scroll-behavior: smooth;
-    font-size: 18px;
-
 }
 
 
 .App {
 
-    background-color: #1A3E7A ; 
+  background: linear-gradient(to bottom, #003366 30%, #87cefa 70%, #ffffff); /* Dark blue to lighter blue, then to white */
     padding: 50px; 
     color: #FFFFFF; 
     min-height: 100vh; 
@@ -34,7 +32,10 @@
     color: gold;
   }
   @media (max-width: 500px) {
-    h2 {
+    h2 ,h2,h3 {
       font-size: 2px; /* Adjust as needed for mobile screens */
     }
   }
+
+
+/* Hover effect to scale the box */

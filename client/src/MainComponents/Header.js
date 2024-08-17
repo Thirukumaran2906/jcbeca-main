@@ -40,7 +40,7 @@ const Header = () => {
               <Link to="/archives" onClick={closeMenu} className="text-white hover:text-blue-500 rounded-lg px-3 py-1 transition duration-300 ease-in-out">Archives</Link>
             </li>
             <li className="p-4">
-              <Link to="/ethics" onClick={closeMenu} className="text-white hover:text-blue-500 rounded-lg px-3 py-1 transition duration-300 ease-in-out">Ethicals</Link>
+              <Link to="/ethics" onClick={closeMenu} className="text-white hover:text-blue-500 rounded-lg px-3 py-1 transition duration-300 ease-in-out">Ethics</Link>
             </li>
             <li className="p-4">
               <Link to="/contact" onClick={closeMenu} className="text-white hover:text-blue-500 rounded-lg px-3 py-1 transition duration-300 ease-in-out">Contact Us</Link>

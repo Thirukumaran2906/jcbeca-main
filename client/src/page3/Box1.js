@@ -7,8 +7,7 @@ function Box1() {
       <p>
       Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA) is a Quarterly Published Research Journal which publishes original Research Articles, Critical Reviews, Short Communications and Case study in the field of Communication technologies, Biomedical Signals and Devices and recent Computer researches. JCBECA allows unlimited access to abstract and full-text. The journal focuses on rapid publication with facilities of online research article tracking & Email/SMS alert etc.
       </p>
-      <p>
-      Submissions of manuscripts are accepted for review only if the work has not been published before, has not been considered for publication elsewhere, and has been agreed for publication by all authors and the institution where the work was done
+      <p>Submissions of manuscripts are accepted for review only if the work has not been published before or has not been considered for publication elsewhere and has been agreed for publication by all authors and the institution where the work was done
       </p>
       <p>
       Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA) publishes the following manuscript types:

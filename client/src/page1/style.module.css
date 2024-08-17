@@ -14,9 +14,7 @@
   line-height: 1.4;
   font-size: 18px;
   text-align: justify;
-  border: 2px solid #b0e0e6;
   overflow: hidden; 
-  border: 4px solid gold;
   color: white;
 }
 
@@ -71,9 +69,7 @@
     text-align: left;
     line-height: 1.7;
     font-size: 18px; 
-    border: 2px solid #b0e0e6; 
     text-align: justify;
-    border: 4px solid gold;
     color: white;
 
   }
@@ -136,9 +132,7 @@
     text-align: left; 
     line-height: 1.4; 
     font-size: 18px; 
-    border: 2px solid #b0e0e6; 
     text-align: justify;
-    border: 4px solid gold;
     color:white;
 
   }
@@ -178,7 +172,6 @@
     margin-bottom: 30px;
     line-height: 1.8; 
     text-align: justify;
-    border: 4px solid gold;
     color:white;
   }
   .tableBox h2 {
@@ -249,7 +242,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   max-width: 90%;
   margin: 30px auto;
-  border: 4px solid gold;
   color: white;
   overflow: hidden;
 }
@@ -263,8 +255,8 @@
   font-size: 18px;
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid gold;
 }
+
 
 /* Base Styles for Heading */
 .heading {

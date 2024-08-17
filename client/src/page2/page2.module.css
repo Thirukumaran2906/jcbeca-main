@@ -10,9 +10,7 @@
     text-align: left;
     line-height: 1.5; 
     font-size: 18px;
-    border: 2px solid #b0e0e6;
     text-align: justify;
-    border: 4px solid gold;
 
   }
   
@@ -67,9 +65,7 @@
     text-align: justify; 
     line-height: 1.4; 
     font-size: 18px;
-    border: 2px solid #b0e0e6;
     position: relative;
-    border: 4px solid gold;
   }
   
   .editorBox h2 {
@@ -87,7 +83,6 @@
     width: 200px; 
     height: 200px; 
     border-radius: 10px; 
-    border: 2px solid #b0e0e6; 
   }
   
   .editorName {
@@ -135,9 +130,7 @@
     text-align: left;
     line-height: 1.4;
     font-size: 18px;
-    border: 2px solid #b0e0e6;
     overflow-x: auto;
-    border: 4px solid gold;
 }
 
 .tableBox2 h2 {
@@ -154,7 +147,6 @@
 }
 
 .tableBox2 th, .tableBox2 td {
-    border: 1px solid #b0e0e6;
     padding: 12px;
     text-align: left;
     white-space: nowrap;
@@ -232,9 +224,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   font-family: Arial, sans-serif; 
   line-height: 1.6; 
-  border: 1px solid #b0e0e6; 
   text-align: left; 
-  border: 4px solid gold;
 }
 
 .joinBox h3 {
@@ -328,7 +318,6 @@
   border-radius: 10px; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
   padding: 0; 
-  border: 4px solid gold;
 
 }
 

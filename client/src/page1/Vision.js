@@ -6,12 +6,12 @@ function Vision() {
     <div className={HomeCss.visionBox}> {/* Add visionBox class here */}
       <h2>Vision and Mission</h2>
       <h3>Vision</h3>
-      <p>JCBECA is dedicated to providing a display place for budding readers, research authors, industry members and reviewers to endorse Engineering scientific research. The purpose of JCBECA journal is to give academicians and researchers in engineering from all around the world a platform to publish their scholarly articles on fundamental and advanced research articles. JCBECA's objective is to have novelty, gentility, and quality in work with instant publishing and affordability.</p>
+      <p>JCBECA is committed to offering a valuable venue for aspiring readers, researchers, industry experts, and reviewers to support and promote engineering-related scientific research. The journal's purpose is to provide a renowned platform for scholars and researchers working in engineering from across the world to publish their research articles on both fundamental and advanced topics. JCBECA is driven by a commitment to excellence in research, integrity, and innovation. The journal strives to make high-quality research available and widely accessible by offering timely publication at a reasonable cost.</p>
       <h3>Mission</h3>
       <ul>
         <li>To inculcate research knowledge through research papers, addressing all the research challenges through literature survey.</li>
-        <li>International online publication to break the barrier in sharing the advanced knowledge and promoting research.</li>
-        <li>Providing the best publication service throughout the time.</li>
+        <li>Delivering exceptional publication services consistently over time.</li>
+        <li>An international online publication committed to breaking barriers in sharing the advanced knowledge and promoting research.</li>
         <li>Promote research and aid development.</li>
       </ul>
     </div>

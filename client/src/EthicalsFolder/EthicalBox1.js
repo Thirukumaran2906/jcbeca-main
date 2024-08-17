@@ -9,6 +9,7 @@ const EthicalBox1 = () => {
       <strong>Publication Ethics and Malpractice Statement</strong><br />
       JCBECA follows the following ethics and malpractice standards
     </p>
+  
   </div>
   );
 }

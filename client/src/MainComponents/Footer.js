@@ -20,11 +20,11 @@ export const Footer = () => {
             </a>
             <div className="mt-6 lg:max-w-sm">
               <p className="text-sm text-gray-800">
-              Journal-for-Communication-and-Biomedical-Engineering-with-Computer-Applications
+              Journal for Communication and Biomedical Engineering with Computer Applications
              
               </p>
               <p className="mt-4 text-sm text-gray-800">
-                This is an International online journal
+                This is an International Online Journal
               </p>
             </div>
           </div>
@@ -89,7 +89,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
           <p className="text-sm text-gray-600">
-          <a href="https://www.linkedin.com/in/thirukumaran6/" target="_blank">Developed by Thirukumaran</a>
+          <a href="https://www.linkedin.com/in/thirukumaran6/" target="_blank">Developed by Thirukumaran S</a>
             
           </p>
           <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">

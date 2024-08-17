@@ -6,7 +6,7 @@ const Equations = () => {
         <div className={Design.Equations}>
           <h2>Equations</h2>
           <p>
-          The equation must typed and numbered. The base equation must be properly cited and called in the reference section. All the equation parameters must me explained in times new roman with font size of 10. No image must be included.
+          The equations must typed and numbered. The base equation must be properly cited and called in the reference section. All the equation parameters must me explained in Times New Roman with font size of 10. No image must be included.
           </p>
           
         </div>

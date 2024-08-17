@@ -6,7 +6,7 @@ const Keyword = () => {
         <div className={Design.Keyword}>
           <h2>Keyword</h2>
           <p>
-          After the abstract portion provide three to six appropriate keywords.
+          After the abstract portion provide 3 to 6 appropriate keywords.
           </p>
           
         </div>

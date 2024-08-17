@@ -16,14 +16,14 @@ const Rules = () => {
             <li>Acceptance received from <strong>admin@jcbeca.com </strong>is only valid.</li>
             <li>JCBECA does not issue conference papers in the form of regular or special issues.</li>
             <li>JCBECA has no connection with any type of organization(s).</li>
-            <li>Plagiarism is checked by the leading plagiarism tool. 100% No plagiarism</li>
+            <li>Plagiarism is checked using leading plagiarism detection tools, ensuring 100% originality.</li>
           </ul>
         </p>
       </div>
       <div className={styles.box}>
         <h2 className={styles.heading}>Publication Details</h2>
         <p>
-          <strong>Frequency:</strong> JCBECA publishes one volume with 3 issues per year. (April, August, December)
+          <strong>Frequency:</strong> JCBECA publishes one volume with 3 issues every year. (April, August and December)
           <br />
           <strong>Language of Publication:</strong> English
           <br />
@@ -31,7 +31,7 @@ const Rules = () => {
           <br />
           <strong>Peer Review Policy:</strong> Double-blind peer-review.
           <br />
-          <strong>Submission Deadline:</strong> There is no deadline for paper submission. Manuscripts can be submitted throughout the year.
+          <strong>Submission Deadline:</strong>There is no fixed deadline for paper submissions; manuscripts are accepted year-round.
         </p>
       </div>
     </div>

@@ -11,11 +11,11 @@ function Box() {
       <div className={HomeCss.textContainer}>
         <h2>Welcome to JCBECA</h2>
         <p>
-          Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA) is an international online journal published quarterly. It is a one-stop, open access source for a high quality and peer-reviewed journal in the fields of Communication Engineering, Biomedical Devices, and Advanced Computer Applications. As Communication Engineering, Biomedical Engineering, and Computer Science Research are interconnected and multidisciplinary and truly involved in the advancement of mankind, JCBECA aims to provide a common platform to all research scholars, researchers, and inventors to communicate and publish original valuable research articles, critical reviews, short communications, and case studies on the cutting-edge technologies for the advancement of Engineering and Technology.
+        The worldwide, peer-reviewed online journal of Communication and Biomedical Engineering with Computer Applications (JCBECA) is published quarterly. JCBECA, an open-access platform, is a premier resource for high-quality research in advanced computer applications, biomedical devices, and communication engineering Recognising the interconnection and multidisciplinary nature of Biomedical Engineering, Computer Science, and Communication Engineering, JCBECA is dedicated to fostering the evolution of knowledge that benefits humanity. Academics, scientists, and innovators can use the journal's platform to share and publish original research papers, critical reviews, concise messages, and case studies on cutting-edge ideas that will affect engineering and technology in the future. 
         </p>
         <br />
         <p>
-          JCBECA focuses on rapid publication with facilities of access to full-length article research with Email and Whatsapp communication. JCBECA has a strict arbitrating process through its editorial procedures to publish genuine and quality papers.
+        JCBECA is committed to the rapid dissemination of knowledge and offers easy access to full-length research articles via email and WhatsApp, among other convenient means. JCBECA's rigorous peer-review process and editing standards ensure the publication of genuine, good research.
         </p>
       </div>
     </div>

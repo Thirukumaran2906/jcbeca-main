@@ -11,7 +11,7 @@ const DocumentDetails = () => {
   useEffect(() => {
     const fetchDocumentData = async () => {
       try {
-        const response = await axios.post('http://localhost:8080/api/user/upload/getfiles', {
+        const response = await axios.post('https://jcbeca.com/api/user/upload/getfiles', {
           volumeNumber,
           issue
         });

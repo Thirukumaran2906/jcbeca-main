@@ -18,27 +18,37 @@ import Communication from './Communication'
 import Review from './Review'
 import Malpractice from './Malpractice'
 import Symbols from './Symbols'
+import Button from './Button'
 
 const Main = () => {
   return (
     <div>
+          <Button />
+
       <Box1 />
       <Box2 />
       <Box3 />
+      <Button />
       <Title />
       <Authors />
       <Abstract />
       <Keyword />
       <LiteratureSurvey />
+      <Button />
+
       <Proposals />
       <Equations />
       <Figure />
       <Table />
       <Result />
+      <Button />
+
       <References />
       <Websites />
       <Communication />
       <Review />
+      <Button />
+
       <Malpractice />
       <Symbols />
     </div>

@@ -14,24 +14,32 @@ import EthicalBox13 from './EthicalBox13'
 import EthicalBox14 from './EthicalBox14'
 import EthicalBox15 from './EthicalBox15'
 import Ethicals1 from './Ethicals1'
-
+import styles from './ethical.module.css'
+import Button from './Button'
 
 const EthicalPage = () => {
   return (
     <div>
       <EthicalBox1 />
+      <Button />
       <EthicalBox2 />
       <EthicalBox3 />
       <EthicalBox4 />
       <EthicalBox5 />
       <Ethicals1 />
+      <Button />
+
       <EthicalBox6 />
       <EthicalBox7 />
       <EthicalBox8 />
       <EthicalBox9 />
+      <Button />
+
       <EthicalBox11 />
       <EthicalBox12 />
       <EthicalBox13 />
+      <Button />
+
       <EthicalBox14 />
       <EthicalBox15 />
     </div>

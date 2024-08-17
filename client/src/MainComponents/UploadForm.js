@@ -45,7 +45,7 @@ const UploadForm = () => {
       const currentMonth = currentDate.getMonth() + 1;
 
       const response = await axios.post(
-        "http://3.93.68.228:8080/api/upload/get-signed-url",
+        "https://jcbeca.com/api/upload/get-signed-url",
         {
           file_name: file.name,
           Issue: parseInt(issue, 10),
@@ -73,7 +73,7 @@ const UploadForm = () => {
       intervalRef.current = setInterval(async () => {
         try {
           const statusResponse = await axios.put(
-            "http://3.93.68.228:8080/api/upload/update-upload-status",
+            "https://jcbeca.com/api/upload/update-upload-status",
             { key }
           );
           console.log("Upload status:", statusResponse);
@@ -91,7 +91,7 @@ const UploadForm = () => {
       clearInterval(intervalRef.current);
 
       await axios.put(
-        "http://localhost:8080/api/user/upload/update-upload-document",
+        "https://jcbeca.com/api/user/upload/update-upload-document",
         {
           Paper_Id: paperId,
           Volume: parseInt(volume, 10),

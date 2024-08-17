@@ -5,9 +5,8 @@ const JoinBox = () => {
   return (
     <div className={CSS.joinBox} id='joinbox'>
       <h3>Join as an Editorial Board Member</h3>
-      <p>We will be pleased to accept services of experts in various fields of Engineering such as Communications, Biotechnology, and Advanced Computer Applications as reviewers.</p>
-      <p>After completing a Ph.D. education in the relevant discipline, one must have at least three years of experience in the field and three original research publications published in a journal. Please be aware that the Editor-in-Chief will have the final say over whether to accept your submission. Please email your Bio-data to <strong>admin@jcbeca.com</strong> along with a passport-sized photo.</p>
-      <button className={CSS.downloadButton}>Download Form</button>
+      <p>We welcome applications from experts in various fields of Engineering, including Communications, Biotechnology, and Advanced Computer Applications, to join our team of reviewers.</p>
+      <p>deal candidates should hold a Ph.D. in a relevant discipline, have a minimum of three years of professional experience in the field, and possess at least three original research publications in reputable journals. Please note that the final decision on acceptance will be made by the Editor-in-Chief. To apply, please email your bio-data and a passport-sized photo to <span className="text-red-500">admin@jcbeca.com</span></p>
     </div>
   );
 }

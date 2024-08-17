@@ -7,6 +7,7 @@ import Rules from './Rules'
 const Home = () => {
   return (
     <div>
+
         <Box />
         <Vision />
         <Rules />

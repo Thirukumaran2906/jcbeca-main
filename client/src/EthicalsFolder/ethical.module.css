@@ -1,62 +1,204 @@
+.boxStyle {
+  background-color: #03396c;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 30px auto;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 18px;
+  color: white;
+  overflow: hidden;
+}
+
+.boxStyle h2 {
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.listStyle {
+  margin: 3px 0;
+  padding: 5px 0;
+  font-weight: bold;
+  color: white;
+  list-style-type: circle;
+  font-size: 16px;
+}
+
+.highlightStyle {
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.footerStyle {
+  margin-top: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+}
+
+.spanTxt {
+  color: greenyellow;
+  font-size: 18px;
+}
+
+.money {
+  font-weight: bold;
+  color: greenyellow;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 680px) {
   .boxStyle {
-    background-color: #03396c;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
-    margin: 30px auto;
-    text-align: left;
-    line-height: 1.4;
-    font-size: 18px;
-    text-align: justify;
-    border: 4px solid gold;
-    color: white;
-    overflow: hidden;
+    font-size: 16px;
+    padding: 20px;
+    margin: 20px auto;
   }
-  
-  .textContainer {
-    overflow: hidden;
-  }
-  
   .boxStyle h2 {
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
   }
-  
-  @media (max-width: 480px) {
-    .boxStyle {
-      font-size: 13px;
-      padding: 20px;
-      margin: 20px auto;
-    }
-  }
-  
-
   .listStyle {
-     margin: 3px 0;
-    padding :5px 0;
-    font-weight: bold;
-    color: white;
-    list-style-type :circle;
+    font-size: 14px;
   }
-  .highlightStyle{
-    font-weight: bold;
-    color:white;
-    text-decoration: underline;
+  .highlightStyle {
+    font-size: 16px;
   }
-
-  .footerStyle  {
-   margin-top: 20px;
-    font-weight: bold;
-    color: white;
-  };
-
+  .footerStyle {
+    font-size: 14px;
+  }
   .spanTxt {
-    color:greenyellow
+    font-size: 16px;
   }
-  .money{
-    font-weight: bold;
-    color: greenyellow;
-    text-decoration: underline;
+  .money {
+    font-size: 16px;
   }
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 50px;
+    height: 100px;
+    padding: 0;
+    font-size: 14px;
+    right: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button span {
+    display: block;
+    margin: 2px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .boxStyle {
+    font-size: 14px;
+    padding: 15px;
+    margin: 15px auto;
+  }
+  .boxStyle h2 {
+    font-size: 18px;
+  }
+  .listStyle {
+    font-size: 12px;
+  }
+  .highlightStyle {
+    font-size: 14px;
+  }
+  .footerStyle {
+    font-size: 12px;
+  }
+  .spanTxt {
+    font-size: 14px;
+  }
+  .money {
+    font-size: 14px;
+  }
+}
+
+
+
+
+.boxStyleButton {
+  background-color: #03396c;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 30px auto;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 18px;
+  color: white;
+  overflow: hidden;
+}
+
+
+
+.buttonStyle {
+  width: 100%;
+  height: 100%;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff6347; 
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 1.5s infinite;
+}
+
+.buttonStyle:hover {
+  background-color: #00ff1e; 
+  transform: scale(1.1); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.buttonStyle:active {
+  transform: scale(0.95);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonStyle {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonStyle {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}

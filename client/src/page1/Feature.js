@@ -7,12 +7,12 @@ function Features() {
       <h2>Key Features</h2>
       <ul>
         <li>JCBECA aims to cover all major domains in Communication Engineering, Biomedical Engineering, and Advanced Computer Application.</li>
-        <li>Offering fast and professional review by a large team of experts from worldwide, mostly the submitted papers will be published within 15 days.</li>
-        <li>Easy Submission and Publication with Online availability throughout the year enabling the user to download articles.</li>
-        <li>One of the journals aiming to bring out research in both Science and Engineering research with a wider scope.</li>
-        <li>JCBECA delivers digitally signed e-certificates after online publication.</li>
-        <li>JCBECA charges a minimum Publication Charge because JCBECA is a non-profit non-loss organization.</li>
-        <li>JCBECA does not provide any constraint for article length and presentation.</li>
+        <li>We offer fast and professional reviews by a global team of experts, ensuring most submitted papers are published within 15 days.</li>
+        <li>Experience streamlined submission and publication processes with continuous online availability, enabling users to access and download articles throughout the year.</li>
+        <li>One of the leading journals dedicated to advancing research across both Science and Engineering with a broad and inclusive scope.</li>
+        <li>JCBECA provides digitally signed e-certificates upon the online publication of accepted articles.</li>
+        <li>JCBECA charges a minimum Publication Charge. JCBECA is a non-profit non-loss organization.</li>
+        <li>JCBECA does not provide any constraint over article length and presentation.</li>
       </ul>
     </div>
   );

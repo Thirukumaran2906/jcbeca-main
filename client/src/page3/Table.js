@@ -6,11 +6,10 @@ const Table = () => {
         <div className={Design.Table}>
           <h2>Table</h2>
           <p>
-          All types of alphanumeric character its can be used to prepare the table. The indication values can be in both integer or in floating or in exponential form. The table must be labelled at the top with continuous numbering
+          All types of alphanumeric characters can be used to prepare the table. The indication values can be in integer or in float or in exponential form. The table must be labelled at the top with continuous numbering. Name of the table must be termed relaventely.
+
           </p>
-          <p>
-          Name of the table must be termed relaventely
-          </p>
+         
           
         </div>
       );
