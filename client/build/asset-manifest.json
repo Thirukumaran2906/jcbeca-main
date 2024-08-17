@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.24940e13.css",
-    "main.js": "/static/js/main.44ec3542.js",
+    "main.css": "/static/css/main.b48969b8.css",
+    "main.js": "/static/js/main.9d34a0ed.js",
     "static/media/jcbeca-cover.png": "/static/media/jcbeca-cover.371f7708568c93bc3857.png",
     "static/media/new-jcbeca-logo.png": "/static/media/new-jcbeca-logo.65664a9dcee836fffc09.png",
     "static/media/copyright.png": "/static/media/copyright.834e96f061007660da1b.png",
     "static/media/logo2-jcbeca.png": "/static/media/logo2-jcbeca.4f237bd02a139c11e6b7.png",
     "index.html": "/index.html",
-    "main.24940e13.css.map": "/static/css/main.24940e13.css.map",
-    "main.44ec3542.js.map": "/static/js/main.44ec3542.js.map"
+    "main.b48969b8.css.map": "/static/css/main.b48969b8.css.map",
+    "main.9d34a0ed.js.map": "/static/js/main.9d34a0ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.24940e13.css",
-    "static/js/main.44ec3542.js"
+    "static/css/main.b48969b8.css",
+    "static/js/main.9d34a0ed.js"
   ]
 }
