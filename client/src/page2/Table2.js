@@ -124,7 +124,7 @@ function TableComponent() {
           </tr>
           <tr>
             <td>16</td>
-            <td><strong>Sucheta Guruprasad</strong> <br />Msc(Microelectronics and Microsystems)<br></br> RF MEMS & Antennas </td>
+            <td><strong>Sucheta Guruprasad</strong> <br />Msc(Microelectronics and Microsystems) </td>
             <td>sucheta.guruprasad@tuhh.de</td>
             <td>Hamburg University of Technology <br></br>Surampalem Kakinada<br></br>Hamburg</td>
             <td>Germany</td>
