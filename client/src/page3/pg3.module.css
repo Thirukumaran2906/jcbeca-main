@@ -10,6 +10,9 @@
   font-size: 18px; /* Base font size */
   line-height: 1.6; /* Line height for readability */
 }
+.guidelinesBox li{
+  list-style-type: circle;
+}
 
 .guidelinesBox h2, .submissionBox h2, .manuscript h2, .titlePage h2, .AuthourPage h2, .AbstractPage h2, .Keyword h2, .Literature h2, .Proposals h2, .Equations h2, .Figure h2, .Table h2, .research h2 {
   font-size: 24px;

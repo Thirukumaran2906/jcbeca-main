@@ -11,7 +11,8 @@ function Features() {
         <li>Experience streamlined submission and publication processes with continuous online availability, enabling users to access and download articles throughout the year.</li>
         <li>One of the leading journals dedicated to advancing research across both Science and Engineering with a broad and inclusive scope.</li>
         <li>JCBECA provides digitally signed e-certificates upon the online publication of accepted articles.</li>
-        <li>JCBECA charges a minimum Publication Charge. JCBECA is a non-profit non-loss organization.</li>
+        <li>JCBECA charges a minimum Publication Charge.</li>
+        <li>JCBECA is a non-profit non-loss organization.</li>
         <li>JCBECA does not provide any constraint over article length and presentation.</li>
       </ul>
     </div>

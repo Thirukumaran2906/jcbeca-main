@@ -17,7 +17,7 @@ const EthicalBox6 = () => {
       </p>
       <p>&nbsp;</p> 
       <p>
-        <strong>Indian Authors:</strong> <span className={styles.money}>INR 300/-</span>. Regardless of Number of Pages.
+        <strong>Indian Authors:</strong> <span className={styles.money}>INR 1000/-</span>. Regardless of Number of Pages.
       </p>
       <p>&nbsp;</p>
       <p>

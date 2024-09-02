@@ -11,8 +11,11 @@ const EthicalBox13 = () => {
       </p>
       <p>
         Dr. M. V.KARTHIKEYAN<br />
-        Associate Professor of Electronics and Communication Engineering<br />
-        Chennai, Tamilnadu, India.
+        JKRMS Publications<br></br>
+2/297, II FLOOR,<br></br> MADHA KOVIL STREET
+KELAMBAKKAM, 
+<br></br>CHENGALPATTU DISTRICT
+TAMILNADU - 603103.
       </p>
     </div>
   );

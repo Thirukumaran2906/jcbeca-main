@@ -16,8 +16,3 @@ router.post('/response-email-user',SendMail);
 
 module.exports = router;
 
-
-
-
-
-

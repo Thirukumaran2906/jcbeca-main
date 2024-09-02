@@ -13,7 +13,7 @@ const Rules = () => {
           <br /><br />
           <strong>Note:</strong>
           <ul style={{ listStyleType: 'disc', paddingInlineStart: '20px' }}>
-            <li>Acceptance received from <strong>admin@jcbeca.com </strong>is only valid.</li>
+            <li>Acceptance received from <strong>jcbecapublications@gmail.com & admin@jcbeca.com</strong> is only valid.</li>
             <li>JCBECA does not issue conference papers in the form of regular or special issues.</li>
             <li>JCBECA has no connection with any type of organization(s).</li>
             <li>Plagiarism is checked using leading plagiarism detection tools, ensuring 100% originality.</li>
@@ -23,15 +23,15 @@ const Rules = () => {
       <div className={styles.box}>
         <h2 className={styles.heading}>Publication Details</h2>
         <p>
-          <strong>Frequency:</strong> JCBECA publishes one volume with 3 issues every year. (April, August and December)
+          <strong>Frequency:</strong> JCBECA publishes one volume with 3 issues every year. (April, August and December) - Triannual Journal.
           <br />
-          <strong>Language of Publication:</strong> English
+          <strong>Language of Publication:</strong> English.
           <br />
-          <strong>Funded By:</strong> SELF
+          <strong>Funded By:</strong> SELF.
           <br />
           <strong>Peer Review Policy:</strong> Double-blind peer-review.
           <br />
-          <strong>Submission Deadline:</strong>There is no fixed deadline for paper submissions; manuscripts are accepted year-round.
+          <strong>Submission Deadline:</strong>There is no fixed deadline for paper submissions manuscripts are accepted year-round.
         </p>
       </div>
     </div>

@@ -4,7 +4,7 @@ import HomeCss from './style.module.css'
 function Table() {
   return (
     <div className={HomeCss.tableBox}> 
-      <h2 className={HomeCss.h2text}>Areas Covered</h2>
+      <h2>Areas Covered</h2>
       <p>Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA) is a scholarly peer-reviewed international scientific journal published Quarterly every year, focusing on theories, methods, and applications in communication and Biomedical Engineering  with Computer Science Engineering.</p>
       <p>In the fields of Communication, Biomedical Engineering along with Computer Science, JCBECA offers a dynamic platform for researchers, industry experts, engineers, managers, and policymakers to contribute and share pioneering work.</p>
       
@@ -21,7 +21,6 @@ function Table() {
             <td className={HomeCss.tdStyle}>
               <ul >
                 <li>Internet of Things (IoT)</li>
-                <li>Quantum Communication</li>
                 <li>Mobile Edge Computing (MEC) and Fog Computing</li>
                 <li>Wireless Internet</li>
                 <li>Wireless Ad Hoc and Sensor Networks</li>
@@ -58,7 +57,6 @@ function Table() {
                 <li>Deep learning</li>
                 <li>Cyber Security</li>
                 <li>Blockchain and Decentralized Technologies</li>
-                <li>Quantum Computing</li>
               </ul>
             </td>
           </tr>

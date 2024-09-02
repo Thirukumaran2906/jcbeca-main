@@ -14,7 +14,7 @@ const Login = () => {
   }, []);
 
   const checkToken = async () => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jcbecatoken');
     if (token) {
       try {
         const response = await axios.get('https://jcbeca.com/api/auth/check', {
@@ -36,7 +36,7 @@ const Login = () => {
     axios.post('https://jcbeca.com/api/auth/login', { email, password })
       .then(response => {
         const { token } = response.data;
-        localStorage.setItem('token', token);
+        localStorage.setItem('jcbecatoken', token);
         setIsLoggedIn(true);
       })
       .catch(error => {
@@ -64,7 +64,7 @@ const Login = () => {
       {isLoggedIn ? (
         showViewPaperAdmin ? <ViewPapersAdmin /> : <UploadForm />
       ) : (
-        <div style={{ marginTop: '50px' }}>
+        <div style={{ marginTop: '50px', color :'black' }}>
           <form onSubmit={handleLogin}>
             <div style={{ marginBottom: '15px' }}>
               <label style={{ display: 'block', marginBottom: '5px' }}>Email:</label>

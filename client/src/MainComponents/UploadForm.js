@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const UploadForm = () => {
@@ -6,31 +6,16 @@ const UploadForm = () => {
   const [issue, setIssue] = useState("");
   const [volume, setVolume] = useState("");
   const [paperId, setPaperId] = useState("");
+  const [totalPages, setTotalPages] = useState(""); // New state for Total Pages
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
-  const intervalRef = useRef(null);
 
-  const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    console.log("Selected file:", selectedFile);
-    setFile(selectedFile);
-  };
-
-  const handleIssueChange = (e) => {
-    setIssue(e.target.value);
-  };
-
-  const handleVolumeChange = (e) => {
-    setVolume(e.target.value);
-  };
-
-  const handlePaperIdChange = (e) => {
-    setPaperId(e.target.value);
-  };
+  const handleFileChange = (e) => setFile(e.target.files[0]);
+  const handleInputChange = (setter) => (e) => setter(e.target.value);
 
   const handleUpload = async () => {
-    if (!file || !issue || !volume || !paperId) {
+    if (!file || !issue || !volume || !paperId || !totalPages) { // Include totalPages in the validation
       setError("All fields are required");
       return;
     }
@@ -50,19 +35,16 @@ const UploadForm = () => {
           file_name: file.name,
           Issue: parseInt(issue, 10),
           Volume: parseInt(volume, 10),
-          Date: currentDate.getDate(),
-          Month: currentMonth,
-          Year: currentYear,
         }
       );
 
       if (response.status !== 200 || !response.data) {
-        setError("Failed to get signed URL, received unexpected response");
+        setError("Failed to get signed URL");
         setUploading(false);
         return;
       }
 
-      const { signedURL, key } = response.data;
+      const { signedURL } = response.data;
 
       if (!signedURL) {
         setError("Signed URL is undefined");
@@ -70,25 +52,11 @@ const UploadForm = () => {
         return;
       }
 
-      intervalRef.current = setInterval(async () => {
-        try {
-          const statusResponse = await axios.put(
-            "https://jcbeca.com/api/upload/update-upload-status",
-            { key }
-          );
-          console.log("Upload status:", statusResponse);
-        } catch (statusError) {
-          console.error("Error checking upload status:", statusError);
-        }
-      }, 1000);
-
       await axios.put(signedURL, file, {
         headers: {
-          "Content-Type": "application/pdf",
+          "Content-Type": "application/octet-stream",
         },
       });
-
-      clearInterval(intervalRef.current);
 
       await axios.put(
         "https://jcbeca.com/api/user/upload/update-upload-document",
@@ -97,6 +65,10 @@ const UploadForm = () => {
           Volume: parseInt(volume, 10),
           Issue: parseInt(issue, 10),
           FileName: file.name,
+          Date: currentDate.getDate(),
+          Month: currentMonth,
+          Year: currentYear,
+          TotalPages: totalPages, // Include total pages in the API call
         }
       );
 
@@ -104,24 +76,18 @@ const UploadForm = () => {
       setIssue("");
       setVolume("");
       setPaperId("");
-      setUploading(false);
+      setTotalPages(""); // Reset totalPages after successful upload
       setSuccess(true);
-      setError(null);
-      console.log("File uploaded successfully!");
     } catch (err) {
-      clearInterval(intervalRef.current);
-      console.error("Error uploading file:", err);
       setError("Error uploading file");
+    } finally {
       setUploading(false);
     }
   };
 
   useEffect(() => {
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
+    // Cleanup if necessary
+    return () => {};
   }, []);
 
   return (
@@ -131,21 +97,28 @@ const UploadForm = () => {
           type="text"
           placeholder="Paper Id"
           value={paperId}
-          onChange={handlePaperIdChange}
+          onChange={handleInputChange(setPaperId)}
           className="text-md font-semibold bg-yellow-300 rounded-lg p-2 mb-4 w-full"
         />
         <input
           type="number"
           placeholder="Issue"
           value={issue}
-          onChange={handleIssueChange}
+          onChange={handleInputChange(setIssue)}
           className="text-md font-semibold bg-yellow-300 rounded-lg p-2 mb-4 w-full"
         />
         <input
           type="number"
           placeholder="Volume"
           value={volume}
-          onChange={handleVolumeChange}
+          onChange={handleInputChange(setVolume)}
+          className="text-md font-semibold bg-yellow-300 rounded-lg p-2 mb-4 w-full"
+        />
+        <input
+          type="text"
+          placeholder="Total Pages" // New input field for Total Pages
+          value={totalPages}
+          onChange={handleInputChange(setTotalPages)}
           className="text-md font-semibold bg-yellow-300 rounded-lg p-2 mb-4 w-full"
         />
         <input
@@ -161,7 +134,9 @@ const UploadForm = () => {
           {uploading ? "Uploading..." : "Upload File"}
         </button>
         {error && <p className="text-red-500 mt-2">{error}</p>}
-        {success && <p className="text-green-500 mt-2 text-lg">File uploaded successfully!</p>}
+        {success && (
+          <p className="text-green-500 mt-2 text-lg">File uploaded successfully!</p>
+        )}
       </div>
     </div>
   );

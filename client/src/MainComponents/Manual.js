@@ -13,18 +13,18 @@ const SubmissionForm = () => {
     application: '',
     paperType: '',
     filename: '',
-    author: { name: '', email: '', department: '', institution: '', country: '' },
-    correspondingAuthor: {
+    author: { 
+      name: '', 
+      email: '', 
+      department: '', 
+      institution: '', 
+      country: '',
       contactNo: '',
-      addressLine1: '',
-      addressLine2: '',
-      city: '',
-      state: '',
-      pinCode: ''
+      state: ''
     }
   });
-
   const [file, setFile] = useState(null);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(true);
   const [isThankYouVisible, setIsThankYouVisible] = useState(false);
 
@@ -41,54 +41,58 @@ const SubmissionForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData(prevFormData => ({ ...prevFormData, [name]: value }));
   };
 
   const handleAuthorChange = (field, value) => {
-    setFormData({ ...formData, author: { ...formData.author, [field]: value } });
-  };
-
-  const handleCorrespondingAuthorChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      correspondingAuthor: { ...formData.correspondingAuthor, [name]: value }
-    });
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      author: { ...prevFormData.author, [field]: value }
+    }));
   };
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
-    setFile(selectedFile);
-    setFormData({ ...formData, filename: selectedFile.name });
+    if (selectedFile) {
+      setFile(selectedFile);
+      setFormData(prevFormData => ({ ...prevFormData, filename: selectedFile.name }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsButtonDisabled(true); // Disable button on submit
+    setTimeout(() => {
+      setIsButtonDisabled(false); // Enable the button after 8 seconds
+    }, 8000);
 
     try {
       const uuid = `jcbeca${Math.floor(Math.random() * 9000000000) + 1000000000}`;
-      const formDataToSend = { ...formData,uuid };
+      const formDataToSend = { ...formData, uuid };
 
       const response = await axios.post('https://jcbeca.com/api/user/upload/user-get-signed-url', formDataToSend);
-      console.log(uuid);
       if (response.status !== 200 || !response.data) {
         console.log("Failed to get signed URL, received unexpected response");
         return;
       }
 
       const signedUrl = response.data.signedURL;
-      await axios.put(signedUrl, file, {
-        headers: {
-          "Content-Type": "application/pdf",
-        },
-      });
-
-      setIsThankYouVisible(true);
-      const To = formDataToSend.author.email
-      console.log(To)
-      await axios.post('https://jcbeca.com/api/user/upload/response-email-user',{To,uuid});
-      console.log('Form data submitted:', formDataToSend);
+      try {
+        await axios.put(signedUrl, file, {
+          headers: {
+            'Content-Type': 'application/octet-stream'
+          }
+        });
+        
+        setIsThankYouVisible(true);
+        const To = formDataToSend.author.email;
+        await axios.post('https://jcbeca.com/api/user/upload/response-email-user', { To, uuid });
+      } catch (error) {
+        alert('Error during file upload, contact the admin');
+        console.log(error);
+      }
     } catch (error) {
+      alert('Error submitting form data, contact the admin');
       console.error('Error submitting form data:', error);
     }
   };
@@ -103,14 +107,14 @@ const SubmissionForm = () => {
       application: '',
       paperType: '',
       filename: '',
-      author: { name: '', email: '', department: '', institution: '', country: '' },
-      correspondingAuthor: {
+      author: { 
+        name: '', 
+        email: '', 
+        department: '', 
+        institution: '', 
+        country: '',
         contactNo: '',
-        addressLine1: '',
-        addressLine2: '',
-        city: '',
-        state: '',
-        pinCode: ''
+        state: ''
       }
     });
     setFile(null);
@@ -139,7 +143,7 @@ const SubmissionForm = () => {
             textAlign: 'center',
             maxWidth: '600px',
             margin: '0 20px',
-            color :'black'
+            color: 'black'
           }}>
             <h2>Welcome!</h2>
             <p style={{ textAlign: 'left', marginBottom: '20px' }}>
@@ -167,7 +171,7 @@ const SubmissionForm = () => {
 
       {!isPopupVisible && !isThankYouVisible && (
         <form className={formCSS.submission_form} onSubmit={handleSubmit}>
-          <h2>Submission Form</h2>
+          <h2>Manuscript Submission Form</h2>
 
           <label>Submission Type*</label>
           <select name="submissionType" value={formData.submissionType} onChange={handleChange} required>
@@ -178,13 +182,13 @@ const SubmissionForm = () => {
           </select>
 
           <label>Title</label>
-          <input type="text" name="title" value={formData.title} onChange={handleChange} required />
+          <input type="text" name="title" value={formData.title} onChange={handleChange} required placeholder='Example : Image Classification'/>
 
           <label>Abstract</label>
-          <textarea name="abstract" value={formData.abstract} onChange={handleChange} required></textarea>
+          <textarea name="abstract" value={formData.abstract} onChange={handleChange} required ></textarea>
 
           <label>Keywords</label>
-          <input type="text" name="keywords" value={formData.keywords} onChange={handleChange} required />
+          <input type="text" name="keywords" value={formData.keywords} onChange={handleChange} required placeholder='Example : Cloud Computing'/>
 
           <label>Research Area</label>
           <select name="researchArea" value={formData.researchArea} onChange={handleChange} required>
@@ -195,7 +199,7 @@ const SubmissionForm = () => {
           </select>
 
           <label>Application</label>
-          <input type="text" name="application" value={formData.application} onChange={handleChange} required />
+          <input type="text" name="application" value={formData.application} onChange={handleChange} required placeholder='Example : Healthcare'/>
 
           <label>Paper Type</label>
           <select name="paperType" value={formData.paperType} onChange={handleChange} required>
@@ -207,10 +211,11 @@ const SubmissionForm = () => {
             <option value="others">Others</option>
           </select>
 
-          <label>Upload File</label>
+          <label> Upload File<span style={{ color: 'red' }}> (.doc, .docx)</span></label>
           <input type="file" onChange={handleFileChange} required />
 
-          <h3>Author</h3>
+
+          <h3>Corresponding Author Details</h3>
           <div className={formCSS.author_field}>
             <label>Name*</label>
             <input
@@ -218,6 +223,7 @@ const SubmissionForm = () => {
               value={formData.author.name}
               onChange={(e) => handleAuthorChange('name', e.target.value)}
               required
+              placeholder='Example : Ramesh'
             />
 
             <label>Email*</label>
@@ -226,97 +232,62 @@ const SubmissionForm = () => {
               value={formData.author.email}
               onChange={(e) => handleAuthorChange('email', e.target.value)}
               required
+              placeholder='Example : abc@gmail.com'
             />
-
+            <label>Contact Number*</label>
+            <input
+              type="text"
+              value={formData.author.contactNo}
+              onChange={(e) => handleAuthorChange('contactNo', e.target.value)}
+              required
+              placeholder='Exapmle : 86101 43762'
+            />
             <label>Department*</label>
             <input
               type="text"
               value={formData.author.department}
               onChange={(e) => handleAuthorChange('department', e.target.value)}
               required
+              placeholder='Example : Information Technology'
             />
-
             <label>Institution*</label>
             <input
               type="text"
               value={formData.author.institution}
               onChange={(e) => handleAuthorChange('institution', e.target.value)}
               required
+              placeholder='Example : XYZ University'
             />
-
+            <label>State*</label>
+            <input
+              type="text"
+              value={formData.author.state}
+              onChange={(e) => handleAuthorChange('state', e.target.value)}
+              required
+              placeholder='Example : Tamil Nadu'
+            />
             <label>Country*</label>
             <input
               type="text"
               value={formData.author.country}
               onChange={(e) => handleAuthorChange('country', e.target.value)}
               required
+              placeholder='Exapmle : India'
             />
+            
           </div>
-
-          <h3>Corresponding Author Details</h3>
-          <div className={formCSS.corresponding_author_fields}>
-            <div className={formCSS.corresponding_author_field}>
-              <label>Contact Number*</label>
-              <input
-                type="text"
-                name="contactNo"
-                value={formData.correspondingAuthor.contactNo}
-                onChange={handleCorrespondingAuthorChange}
-                required
-              />
-            </div>
-            <div className={formCSS.corresponding_author_field}>
-              <label>Address Line 1*</label>
-              <input
-                type="text"
-                name="addressLine1"
-                value={formData.correspondingAuthor.addressLine1}
-                onChange={handleCorrespondingAuthorChange}
-                required
-              />
-            </div>
-            <div className={formCSS.corresponding_author_field}>
-              <label>Address Line 2</label>
-              <input
-                type="text"
-                name="addressLine2"
-                value={formData.correspondingAuthor.addressLine2}
-                onChange={handleCorrespondingAuthorChange}
-              />
-            </div>
-            <div className={formCSS.corresponding_author_field}>
-              <label>City*</label>
-              <input
-                type="text"
-                name="city"
-                value={formData.correspondingAuthor.city}
-                onChange={handleCorrespondingAuthorChange}
-                required
-              />
-            </div>
-            <div className={formCSS.corresponding_author_field}>
-              <label>State*</label>
-              <input
-                type="text"
-                name="state"
-                value={formData.correspondingAuthor.state}
-                onChange={handleCorrespondingAuthorChange}
-                required
-              />
-            </div>
-            <div className={formCSS.corresponding_author_field}>
-              <label>Pin Code*</label>
-              <input
-                type="text"
-                name="pinCode"
-                value={formData.correspondingAuthor.pinCode}
-                onChange={handleCorrespondingAuthorChange}
-                required
-              />
-            </div>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+            <button type="submit" disabled={isButtonDisabled} style={{
+              padding: '10px 90px',
+              backgroundColor: 'green',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer'
+            }}>
+              {isButtonDisabled ? 'Submitting...' : 'Submit'}
+            </button>
           </div>
-
-          <button type="submit">Submit</button>
         </form>
       )}
     </>

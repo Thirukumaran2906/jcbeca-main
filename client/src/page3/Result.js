@@ -5,7 +5,7 @@ function Result() {
   return (
     <div className={Design.research}>
       <section>
-        <h2>RESULT and Discussion</h2>
+        <h2>Result and Discussion</h2>
         <p>The results should include detailed descriptions of the key findings, highlighting significant data points and trends. Use of tables, graphs, and figures is essential to visually represent the data, making it easier for readers to understand complex information. Each figure and table should be accompanied by descriptive captions and referenced appropriately in the text.</p>
       </section>
 

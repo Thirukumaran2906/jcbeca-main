@@ -25,6 +25,7 @@ export const ContactUs = () => {
             <div className="flex items-start space-x-2">
               <FaMapMarkerAlt className="text-[#ffd700] text-xl" />
               <div className="text-justify">
+              DR Karthikeyan M V <br></br>
                 JKRMS Publications <br />
                 2/297, II FLOOR, MADHA KOVIL STREET <br />
                 KELAMBAKKAM, CHENGALPATTU DISTRICT <br />
@@ -43,6 +44,12 @@ export const ContactUs = () => {
                 admin@jcbeca.com
               </a>
             </div>
+            <div className="flex items-center space-x-2">
+              <FaEnvelope className="text-[#ffd700] text-xl" />
+              <a href="mailto:admin@jcbeca.com" className="text-red-500 hover:text-red-700 text-sm md:text-base">
+                jcbecapublications@gmail.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -52,14 +59,14 @@ export const ContactUs = () => {
           <h2 className="text-lg md:text-xl font-bold mb-3">Research Paper Format</h2>
           <div className="text-justify text-sm md:text-base">
             Download it from here 
-            <a target='_blank' href='https://docs.google.com/document/d/1XYTKa8PHpTEo8-MZLdiZ8PKV0je_M6Hc/edit?pli=1' className="text-red-500 hover:text-red-700"> Click here</a>
+            <a target='_blank' href='https://user-jcbeca.s3.amazonaws.com/JCBECA_ARTICEL_TEMPLATE.docx' className="text-red-500 hover:text-red-700"> Click here</a>
           </div>
         </div>
         <div className="bg-[#03396c] p-4 rounded-lg shadow-lg text-left text-white overflow-hidden h-32">
           <h2 className="text-lg md:text-xl font-bold mb-3">Copyright Permission Form</h2>
           <div className="text-justify text-sm md:text-base">
             Download it from here
-            <a target='_blank' href='https://docs.google.com/document/d/1zGquVWp3YWTuDbcyqOftUfZhIHksYhfs/edit?pli=1' className="text-red-500 hover:text-red-700"> Click here</a>
+            <a target='_blank' href='https://user-jcbeca.s3.amazonaws.com/JCBECA+copy+right+transfer+form.docx' className="text-red-500 hover:text-red-700"> Click here</a>
           </div>
         </div>
       </div>

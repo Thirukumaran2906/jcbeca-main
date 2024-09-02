@@ -173,6 +173,7 @@
     line-height: 1.8; 
     text-align: justify;
     color:white;
+    
   }
   .tableBox h2 {
     color:white;
@@ -195,6 +196,7 @@
     border: 1px solid #ddd; 
     padding: 20px; 
     text-align: left; 
+    
   }
   .tableBox ul li{
     list-style-type: square;
@@ -274,4 +276,15 @@
   .box {
     margin: 10px 0;
   }
+}
+
+
+
+
+.featuresBox h2 {
+  color: gold;
+}
+
+.tableBox h2{
+  color: gold;
 }

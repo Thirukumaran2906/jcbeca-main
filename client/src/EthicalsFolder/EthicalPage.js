@@ -16,6 +16,7 @@ import EthicalBox15 from './EthicalBox15'
 import Ethicals1 from './Ethicals1'
 import styles from './ethical.module.css'
 import Button from './Button'
+import Plagrism from './plagrism'
 
 const EthicalPage = () => {
   return (
@@ -34,6 +35,7 @@ const EthicalPage = () => {
       <EthicalBox8 />
       <EthicalBox9 />
       <Button />
+      <Plagrism />
 
       <EthicalBox11 />
       <EthicalBox12 />

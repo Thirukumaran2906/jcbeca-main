@@ -24,7 +24,10 @@ export const Footer = () => {
              
               </p>
               <p className="mt-4 text-sm text-gray-800">
-                This is an International Online Journal
+              Address : JKRMS Publications <br />
+                2/297, II FLOOR, MADHA KOVIL STREET <br />
+                KELAMBAKKAM, CHENGALPATTU DISTRICT <br />
+                TAMILNADU - 603103
               </p>
             </div>
           </div>
@@ -54,6 +57,16 @@ export const Footer = () => {
               </a>
             </div>
             <div className="flex">
+              <p className="mr-1 text-gray-800">Email:</p>
+              <a
+                href="mailto:jcbecapublications@gmail.com"
+                aria-label="Our email"
+                title="Our email"
+                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              >jcbecapublications@gmail.com
+              </a>
+            </div>
+            <div className="flex">
               <p className="mr-1 text-gray-800">Address:</p>
               <a
                 href="https://www.google.com/maps"
@@ -63,7 +76,7 @@ export const Footer = () => {
                 title="Our address"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                Chennai
+                Chennai.
               </a>
             </div>
           </div>

@@ -45,4 +45,4 @@ const volumeSchema = new mongoose.Schema({
 
 const Upload = mongoose.model('volume',volumeSchema);
 
-module.exports = {Upload };
+module.exports = { Upload };

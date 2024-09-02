@@ -7,8 +7,8 @@ const { v4: uuidv4 } = require('uuid'); // For generating UUID
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "ecoridenewtesting@gmail.com", 
-    pass:"hffhtsrenabhnvnd" ,
+    user: "jcbecapublications@gmail.com", 
+    pass:"kdlsoshjhvrhjnsp" ,
   },
 });
 
@@ -34,8 +34,7 @@ AWS.config.update({
       application,
       paperType,
       filename,
-      author,  // Only one author
-      correspondingAuthor,
+      author
     } = req.body;
   console.log(uuid);
     const bucketName = process.env.AWS_S3_USER_BUCKET_NAME;
@@ -47,7 +46,7 @@ AWS.config.update({
       const url = await s3.getSignedUrlPromise('putObject', {
         Bucket: bucketName,
         Key: key,
-        ContentType: 'application/pdf',
+        ContentType: 'application/octet-stream',
         Expires: signedUrlExpireSeconds,
 
       });
@@ -58,30 +57,27 @@ AWS.config.update({
   
       try {
         const S3data = await Submission.create({
-          Paper_Id: uuid,
+          PaperId: uuid,
           Title: title,
-          submissionType: submissionType,
+          SubmissionType: submissionType,
           Abstract: abstract,
-          KeyWords: keywords,
-          Research_Area: researchArea,
+          Keywords: keywords,
+          ResearchArea: researchArea,
           Application: application,
-          Paper_Type: paperType,
-          Author_Name: author.name,
-          Author_Email: author.email,
-          Author_Department: author.department,
-          Author_Institution: author.institution,
-          Author_Country: author.country,
-          Author_Contact_No: author.contactNo,
-          Contact_Number: correspondingAuthor.contactNo,
-          State: correspondingAuthor.state,
-          City: correspondingAuthor.city,
-          Zip_Code: correspondingAuthor.pinCode,
-          Address_1: correspondingAuthor.addressLine1,
-          Address_2: correspondingAuthor.addressLine2,
-          File_Path: fileUrlS3,
-          Journal_File_Path: "",
+          PaperType: paperType,
+          AuthorName: author.name,
+          AuthorEmail: author.email,
+          AuthorDepartment: author.department,
+          AuthorInstitution: author.institution,
+          AuthorCountry: author.country,
+          ContactNumber: author.contactNo,
+          State: author.state,
+          FilePath: fileUrlS3,
+          JournalFilePath: "",
+          Date : "",
+          Pages : "",
           Status: 0,
-          isUploaded: false,
+          IsUploaded: false,
         });
         console.log("data created");
   
@@ -104,64 +100,41 @@ AWS.config.update({
     }
   };
   
-  
 
 
 
   const UpdateJournalFile = async (req, res) => {
-    const { Paper_Id, Volume, Issue ,FileName} = req.body;
+    const { Paper_Id, Volume, Issue, FileName, Date, Month, Year ,TotalPages} = req.body;
     const fileUrlS3 = `https://${process.env.AWS_S3_BUCKET_NAME}.s3.amazonaws.com/${FileName}`;
+    const DOI = `${Date}/${Month}/${Year}`;
+    console.log("update process")
     try {
-      const updatedSubmission = await Submission.findOneAndUpdate(
-        { Paper_Id: Paper_Id },
+      const updateResult = await Submission.updateOne(
+        { PaperId: Paper_Id },
         {
           $set: {
-            Journal_File_Path: fileUrlS3,
+            JournalFilePath: fileUrlS3,
             Volume: Volume,
             Issue: Issue,
-            Status: 1
-          }
-        },
+            Date: DOI,
+            Pages : TotalPages,
+            Status: 1,
+          },
+        }
       );
-  
-      if (!updatedSubmission) {
-        return res.status(404).json({ message: 'Submission not found' });
+      console.log("update process")
+
+      if (updateResult.matchedCount === 0) {
+        return res.status(404).json({ message: "Submission not found" });
       }
   
-      res.status(200).json(updatedSubmission);
+      res.status(200).json({ message: "Submission updated successfully", updateResult });
     } catch (error) {
-      res.status(500).json({ message: 'An error occurred', error });
+      res.status(500).json({ message: "An error occurred", error });
     }
   };
-
-
-  const updateUploadDetails = async (req, res) => {
-    const { key } = req.body; 
-    try {
-      const updatedTrue = await Upload.updateOne(
-        { Key : key }, 
-        { $set: { isUploaded: true } } 
-      );
-      
-      if (updatedTrue.modifiedCount > 0) {
-        return res.json({
-          success: true,
-          message: 'Updated'
-        });
-      } else {
-        return res.status(404).json({
-          success: false,
-          
-          message: 'Document not found'
-        });
-      }
   
-    } catch (err) {
-      return res.status(400).json({
-        message: 'Error in update uploadDetails function'
-      });
-    }
-  };
+  
 
   const GetFilesUser = async (req, res) => {
     try {

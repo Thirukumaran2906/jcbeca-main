@@ -15,7 +15,7 @@ function EditorDesk() {
         In order to publish top-notch, peer-reviewed research, reports, review articles, and case studies in all fields of communication, Biomedical, and computer application, JCBECA Journals is inviting you to submit a manuscript. We are inviting authors to send for the same.
       </p>
       <p>
-        <strong>Editor In Chief<br />JCBECA</strong>
+        <strong>Chief Editor<br />JCBECA</strong>
       </p>
     </div>
   );
