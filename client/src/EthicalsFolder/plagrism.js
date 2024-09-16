@@ -10,16 +10,16 @@ const Plagrism = () => {
     </p>
     <h2>How is plagiarism handled?</h2>
     <p>
-    The manuscripts in which the plagiarism is detected are handled based on the extent of the plagiarism greater than 25%
+    The manuscripts in which the plagiarism is detected are handled based on the extent of the plagiarism lesser than 25%
     </p>
-    <h2>Plagiarism:</h2>
+    <h2>Plagiarism</h2>
     <p>
     The manuscript will be given an ID and the manuscript is sent to author for content revision.
     </p>
     <h2>25 - 30% Plagiarism</h2>
     <p>
     The manuscript will not be given an ID and the manuscript is sent back to author for content revision.    </p>
-    <h2> Greater than 30% Plagiarism: </h2>
+    <h2> Greater than 30% Plagiarism </h2>
     <p>
     The manuscript will be rejected without the review. The authors are advised to revise the manuscript and resubmit the manuscript.    </p>
     <h2>Why manuscripts with Greater than 30% plagiarism is rejected</h2>

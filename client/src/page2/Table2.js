@@ -96,14 +96,14 @@ function TableComponent() {
           </tr>
           <tr>
             <td>12</td>
-            <td><strong>Sai sadhan Saravanan</strong> <br />Professor <br /> Master of Science in Information Systems Management, <br></br>Computer Networks</td>
+            <td><strong>Sai sadhan Saravanan</strong> <br />Assistant Professor <br /> Master of Science in Information Systems Management, <br></br>Computer Networks</td>
             <td>saisadhan98@gmail.com</td>
             <td>Arizona State University,Arizona State,USA</td>
             <td>USA</td>
           </tr>
           <tr>
             <td>13</td>
-            <td><strong>Manish Kumar Sah</strong> <br /> Biochemistry & Biomedical </td>
+            <td><strong>Dr. Manish Kumar Sah</strong> <br /> Biochemistry & Biomedical </td>
             <td>manish.sah820226@gmail.com</td>
             <td>Mahendra Morang Adarsh Multiple Campus	<br></br>Tribhuvan University, Kathmandu, Nepal</td>
             <td> NEPAL</td>
@@ -124,10 +124,18 @@ function TableComponent() {
           </tr>
           <tr>
             <td>16</td>
-            <td><strong>Sucheta Guruprasad</strong> <br />Msc(Microelectronics and Microsystems) </td>
+            <td><strong>Sucheta Guruprasad</strong> <br />Associate Professor<br></br>Msc(Microelectronics and Microsystems) </td>
             <td>sucheta.guruprasad@tuhh.de</td>
             <td>Hamburg University of Technology <br></br>Surampalem Kakinada<br></br>Hamburg</td>
             <td>Germany</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td><strong>Dr.SHIRLEY SELVAN </strong> <br />Associate Professor<br></br>Electronics and Communication Engineering 
+            </td>
+            <td>shirleycharlethenry@gmail.com</td>
+            <td>St.Joseph's Institute of Technology,<br></br> OMR, Chennai -600119	</td>
+            <td>INDIA</td>
           </tr>
          
         </tbody>

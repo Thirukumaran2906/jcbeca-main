@@ -20,13 +20,13 @@ export const Footer = () => {
             </a>
             <div className="mt-6 lg:max-w-sm">
               <p className="text-sm text-gray-800">
-              Journal for Communication and Biomedical Engineering with Computer Applications
+              Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA)
              
               </p>
               <p className="mt-4 text-sm text-gray-800">
-              Address : JKRMS Publications <br />
+              Publisher : JKRMS Publications <br />
                 2/297, II FLOOR, MADHA KOVIL STREET <br />
-                KELAMBAKKAM, CHENGALPATTU DISTRICT <br />
+                KELAMBAKKAM, CHENGALPATTU DISTRICT, CHENNAI <br />
                 TAMILNADU - 603103
               </p>
             </div>
@@ -35,6 +35,16 @@ export const Footer = () => {
             <p className="text-base font-bold tracking-wide text-gray-900">
               Contacts
             </p>
+            <div className="flex">
+              <p className="mr-1 text-gray-800">JKRMS Publications</p>
+              <a
+                href="tel:8610143762"
+                aria-label="Our phone"
+                title="Our phone"
+                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+              >
+              </a>
+            </div>
             <div className="flex">
               <p className="mr-1 text-gray-800">Phone:</p>
               <a

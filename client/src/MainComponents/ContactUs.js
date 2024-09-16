@@ -19,13 +19,13 @@ export const ContactUs = () => {
             title="Google Maps"
           ></iframe>
         </div>
-        <div className="md:w-1/2 bg-[#03396c] p-6 md:p-8 rounded-lg shadow-lg text-left text-white overflow-hidden flex flex-col justify-center">
+        <div className="md:w-1/2 bg-[#03396c] p-6 md:p-8 rounded-lg shadow-lg text-left text-white flex flex-col justify-center min-h-[450px]">
           <h2 className="text-xl md:text-2xl font-bold mb-3">Contact Us</h2>
+          <h2 className="text-xl md:text-1xl font-bold mb-3">Publisher</h2>
           <div className="space-y-4 text-sm md:text-base">
             <div className="flex items-start space-x-2">
               <FaMapMarkerAlt className="text-[#ffd700] text-xl" />
               <div className="text-justify">
-              DR Karthikeyan M V <br></br>
                 JKRMS Publications <br />
                 2/297, II FLOOR, MADHA KOVIL STREET <br />
                 KELAMBAKKAM, CHENGALPATTU DISTRICT <br />
@@ -46,7 +46,36 @@ export const ContactUs = () => {
             </div>
             <div className="flex items-center space-x-2">
               <FaEnvelope className="text-[#ffd700] text-xl" />
-              <a href="mailto:admin@jcbeca.com" className="text-red-500 hover:text-red-700 text-sm md:text-base">
+              <a href="mailto:jcbecapublications@gmail.com" className="text-red-500 hover:text-red-700 text-sm md:text-base">
+                jcbecapublications@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:w-1/2 bg-[#03396c] p-6 md:p-8 rounded-lg shadow-lg text-left text-white flex flex-col justify-center min-h-[450px]">
+          <h2 className="text-xl md:text-2xl font-bold mb-3">Contact Us</h2>
+          <h2 className="text-xl md:text-1xl font-bold mb-3">Chief - Editor</h2>
+          <div className="space-y-4 text-sm md:text-base">
+            <div className="flex items-start space-x-2">
+              <FaMapMarkerAlt className="text-[#ffd700] text-xl" />
+              <div className="text-justify">
+                Dr Karthikeyan M V <br />
+                Associate Professor (ECE)<br />
+                2/297, I FLOOR, MADHA KOVIL STREET <br />
+                KELAMBAKKAM, CHENGALPATTU DISTRICT <br />
+                TAMILNADU - 603103
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaPhoneAlt className="text-[#ffd700] text-xl" />
+              <a href="tel:+918610143762" className="text-red-500 hover:text-red-700 text-sm md:text-base">
+                +91 86101 43762
+              </a>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaEnvelope className="text-[#ffd700] text-xl" />
+              <a href="mailto:jcbecapublications@gmail.com" className="text-red-500 hover:text-red-700 text-sm md:text-base">
                 jcbecapublications@gmail.com
               </a>
             </div>
@@ -54,15 +83,15 @@ export const ContactUs = () => {
         </div>
       </div>
 
-      <div className="mt-8 space-y-4">
-        <div className="bg-[#03396c] p-4 rounded-lg shadow-lg text-left text-white overflow-hidden h-32">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-[#03396c] p-4 rounded-lg shadow-lg text-left text-white flex flex-col justify-center h-[180px]">
           <h2 className="text-lg md:text-xl font-bold mb-3">Research Paper Format</h2>
           <div className="text-justify text-sm md:text-base">
-            Download it from here 
+            Download it from here
             <a target='_blank' href='https://user-jcbeca.s3.amazonaws.com/JCBECA_ARTICEL_TEMPLATE.docx' className="text-red-500 hover:text-red-700"> Click here</a>
           </div>
         </div>
-        <div className="bg-[#03396c] p-4 rounded-lg shadow-lg text-left text-white overflow-hidden h-32">
+        <div className="bg-[#03396c] p-4 rounded-lg shadow-lg text-left text-white flex flex-col justify-center h-[180px]">
           <h2 className="text-lg md:text-xl font-bold mb-3">Copyright Permission Form</h2>
           <div className="text-justify text-sm md:text-base">
             Download it from here

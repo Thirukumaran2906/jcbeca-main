@@ -78,7 +78,7 @@ const SubmissionForm = () => {
 
       const signedUrl = response.data.signedURL;
       try {
-        await axios.put(signedUrl, file, {
+         await axios.put(signedUrl, file, {
           headers: {
             'Content-Type': 'application/octet-stream'
           }
@@ -170,6 +170,46 @@ const SubmissionForm = () => {
       )}
 
       {!isPopupVisible && !isThankYouVisible && (
+        <div><div style={{ 
+  display: 'flex', 
+  justifyContent: 'center', 
+  alignItems: 'center', 
+  marginBottom: '20px',
+  padding: '10px',
+  borderRadius: '10px',
+  gap: '10px',
+  flexDirection: window.innerWidth <= 768 ? 'column' : 'row', // Responsive handling
+}}>
+  <button 
+    onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA_ARTICEL_TEMPLATE.docx'} 
+    style={{ 
+      padding: '10px 20px', 
+      backgroundColor: 'red', 
+      color: '#fff', 
+      border: 'none', 
+      borderRadius: '5px',
+      cursor: 'pointer',
+      width: '100%'
+    }}
+  >
+  Paper Format
+  </button>
+  
+  <button 
+    onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA+copy+right+transfer+form.docx'} 
+    style={{ 
+      padding: '10px 20px', 
+      backgroundColor: 'red', 
+      color: '#fff', 
+      border: 'none', 
+      borderRadius: '5px',
+      cursor: 'pointer',
+      width: '100%'
+    }}
+  >
+    Copyright Form
+  </button>
+</div>
         <form className={formCSS.submission_form} onSubmit={handleSubmit}>
           <h2>Manuscript Submission Form</h2>
 
@@ -289,6 +329,8 @@ const SubmissionForm = () => {
             </button>
           </div>
         </form>
+        </div>
+
       )}
     </>
   );

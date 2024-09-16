@@ -3,7 +3,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 
 const Volumes = () => {
   const volumeData = [
-    { volumeNumber: 1, volumeName: 'Volume 1', issues: ['Issue 1'] }
+    { volumeNumber: 1, volumeName: 'JCBECA Volume - 1 (2024)', issues: ['Issue 1 - [MAY - AUGUST]'] }
   ];
 // ['Issue 1', 'Issue 2', 'Issue 3', 'Issue 4'] 
   const [expandedVolume, setExpandedVolume] = useState(null);
@@ -16,7 +16,7 @@ const Volumes = () => {
     <div className="container mx-auto mt-8">
           <h1 className="text-3xl font-bold mb-8 text-center">Welcome to Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA)</h1>
 
-      <h1 className="text-3xl font-bold mb-8 text-center">Volumes</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">JCBECA Volumes</h1>
       {volumeData.map((volume, index) => (
         <div key={index} className="mb-4">
           <div
