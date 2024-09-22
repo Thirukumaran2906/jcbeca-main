@@ -137,6 +137,14 @@ function TableComponent() {
             <td>St.Joseph's Institute of Technology,<br></br> OMR, Chennai -600119	</td>
             <td>INDIA</td>
           </tr>
+          <tr>
+            <td>18</td>
+            <td><strong> Juliyan Patrik Arockia Doss</strong> <br />Electrical Engineer<br></br>Advanced Manufacturing Engineering 
+            </td>
+            <td>juliyanpatrik@gmail.com</td>
+            <td>Siemens Healthineers<br></br>  Hansen Way, Palo Alto, California- 94304</td>
+            <td>USA</td>
+          </tr>
          
         </tbody>
       </table>

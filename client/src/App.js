@@ -16,6 +16,7 @@ import ContactUs from './MainComponents/ContactUs';
 import EthicalPage from './EthicalsFolder/EthicalPage';
 import ViewPapersAdmin from './MainComponents/ViewPapersAdmin';
 import ThankYou from './MainComponents/ThankYou';
+import DocIframre from './MainComponents/DocIframre';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/contact' element={<ContactUs />} />
         <Route path="/documents/:volumeNumber/:issue" element={<DocumentDetails />} />
         <Route path="/thank" element={<ThankYou />} />
+        <Route path="//volumes/issue/document" element={<DocIframre />} />
       </Routes>
       </div>
       <Footer />

@@ -26,9 +26,12 @@ export const ContactUs = () => {
             <div className="flex items-start space-x-2">
               <FaMapMarkerAlt className="text-[#ffd700] text-xl" />
               <div className="text-justify">
+              
                 JKRMS Publications <br />
-                2/297, II FLOOR, MADHA KOVIL STREET <br />
-                KELAMBAKKAM, CHENGALPATTU DISTRICT <br />
+                Dr Karthikeyan M V <br></br>
+                2/297, MADHA KOVIL STREET <br />
+                KELAMBAKKAM, KANCHEEPURAM DISTRICT <br />
+                CHENNAI,
                 TAMILNADU - 603103
               </div>
             </div>
@@ -61,9 +64,10 @@ export const ContactUs = () => {
               <FaMapMarkerAlt className="text-[#ffd700] text-xl" />
               <div className="text-justify">
                 Dr Karthikeyan M V <br />
-                Associate Professor (ECE)<br />
-                2/297, I FLOOR, MADHA KOVIL STREET <br />
-                KELAMBAKKAM, CHENGALPATTU DISTRICT <br />
+                JKRMS PUBLICATIONS<br />
+                2/297, MADHA KOVIL STREET <br />
+                KELAMBAKKAM,  KANCHEEPURAM DISTRICT <br />
+                CHENNAI,
                 TAMILNADU - 603103
               </div>
             </div>

@@ -44,7 +44,7 @@ const Rules = () => {
           <br />
           <strong>Copyright:</strong> JKRMS Publications
           <br />
-          <strong>Subject:</strong> Communication, Biomedical & Computer Science (Multidisciplinary Subjects)
+          <strong>Subject:</strong>  Engineering
           <br />
           <strong>Publication Format:</strong> Online
         </p>

@@ -24,7 +24,7 @@ const LogoHeader = () => {
             <div className={logoCss.logo}></div>
             <div className={logoCss.content}>
                 <h1 className={logoCss.h2logo}>Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA)</h1>
-                <h4 className={logoCss.h4}>International Journal | Open Access | Double Blind Peer Reviewed | Call for Papers</h4>
+                <h4 className={logoCss.h4}>International Journal | Open Access | Double Blind Peer Reviewed | Call for Papers | Engineering</h4>
                 <p className={logoCss.p}>Published By JKRMS Publications</p>
             </div>
             <div className={logoCss.badge}>
