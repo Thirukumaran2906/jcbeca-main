@@ -30,7 +30,7 @@ export const ContactUs = () => {
                 JKRMS Publications <br />
                 Dr Karthikeyan M V <br></br>
                 2/297, MADHA KOVIL STREET <br />
-                KELAMBAKKAM, KANCHEEPURAM DISTRICT <br />
+                KELAMBAKKAM, KANCHIPURAM  DISTRICT <br />
                 CHENNAI,
                 TAMILNADU - 603103
               </div>
@@ -66,7 +66,7 @@ export const ContactUs = () => {
                 Dr Karthikeyan M V <br />
                 JKRMS PUBLICATIONS<br />
                 2/297, MADHA KOVIL STREET <br />
-                KELAMBAKKAM,  KANCHEEPURAM DISTRICT <br />
+                KELAMBAKKAM, KANCHIPURAM DISTRICT <br />
                 CHENNAI,
                 TAMILNADU - 603103
               </div>

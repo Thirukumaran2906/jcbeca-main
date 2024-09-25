@@ -14,7 +14,7 @@ const EthicalBox13 = () => {
         JKRMS Publications<br />
         2/297, Madha Kovil Street,<br />
         Kelambakkam,<br />
-        Kancheepuram District,<br />
+        KANCHIPURAM District,<br />
         Chennai, Tamil Nadu - 603103.
       </p>
     </div>

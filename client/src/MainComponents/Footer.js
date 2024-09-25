@@ -26,7 +26,7 @@ export const Footer = () => {
               <p className="mt-4 text-sm text-gray-800">
               Publisher : DR.M.V.KARTHIKEYAN <br></br>JKRMS Publications <br />
                 2/297, MADHA KOVIL STREET <br />
-                KELAMBAKKAM, KANCHEEPURAM DISTRICT,<br></br> CHENNAI.<br />
+                KELAMBAKKAM, KANCHIPURAM DISTRICT,<br></br> CHENNAI.<br />
                 TAMILNADU - 603103
               </p>
             </div>
