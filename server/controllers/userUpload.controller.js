@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: "jcbecapublications@gmail.com", 
-    pass:"kdlsoshjhvrhjnsp" ,
+    pass:"kwjtjarmpcifziie" ,
   },
 });
 
@@ -159,7 +159,7 @@ AWS.config.update({
 
 
   const SendMail = (req, res) => {
-    const { To, uuid } = req.body; // Destructure To and uuid from req.body
+    const { To, uuid } = req.body; 
     console.log(To);
   
     const mailOptions = {

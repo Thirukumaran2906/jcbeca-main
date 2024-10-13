@@ -37,16 +37,16 @@ function TableComponent() {
             <td>St.Joseph's Institute of Technology, OMR, Chennai -600119 <br /></td>
             <td>INDIA</td>
           </tr> */}
-          <tr>
+          {/* <tr>
             <td>3</td>
             <td><strong>Dr. G. S. Annie Grace Vimala</strong> <br />Professor <br />Biomedical Engineering and Image Processing</td>
             <td>annieagv27@gmail.com</td>
             <td>Saveetha School of Engineering, <br />SIMATS</td>
             <td>INDIA</td>
-          </tr>
+          </tr> */}
           <tr>
-            <td>4</td>
-            <td><strong>Dr. SHIRLEY SELVAN </strong> <br />Associate Professor<br></br>Machine Learning techniques, Medical Imaging,<br></br> Pattern Recognition
+            <td>3</td>
+            <td><strong>Dr. Shirley Selvan </strong> <br />Associate Professor<br></br>Machine Learning techniques, Medical Imaging,<br></br> Pattern Recognition
             </td>
             <td>shirleycharlethenry@gmail.com</td>
             <td>St Joseph's college of engineering,<br></br> OMR, Chennai -600119	</td>
@@ -60,15 +60,15 @@ function TableComponent() {
             <td>SRM Institute of Science & Technology, <br />SRM Nagar, Kattankulathur - 603203</td>
             <td>INDIA</td>
           </tr> */}
-          <tr>
+          {/* <tr>
             <td>5</td>
             <td><strong>Dr. S. Tephillah</strong> <br />Associate Professor <br />Cognitive Radio Networks and Machine Learning</td>
             <td>tephisam@gmail.com<br></br></td>
             <td>Department of Electronics and Communication Engineering, <br />St. Joseph's Institute of Technology, OMR, Chennai - 600119</td>
             <td>INDIA</td>
-          </tr>
+          </tr> */}
           <tr>
-            <td>6</td>
+            <td>4</td>
             <td><strong>Dr. M. Senthil Murugan</strong> <br /> Associate Professor<br></br>Cryptography, Network Security</td>
             <td>senthilmuruganap@gmail.com</td>
             
@@ -83,7 +83,7 @@ function TableComponent() {
             <td>INDIA</td>
           </tr> */}
           <tr>
-            <td>7</td>
+            <td>5</td>
             <td><strong>Dr. K. Vijayalakshmi</strong> <br />Assistant Professor</td>
             <td>vijaylak@srmist.edu.in</td>
             <td>Department of Computational Intelligence, <br />School of Computing, College of Engineering and Technology, <br />SRM Institute of Science and Technology, Kattankulathur, <br></br>Chennai - 603203</td>
@@ -104,8 +104,8 @@ function TableComponent() {
             <td>INDIA</td>
           </tr> */}
           <tr>
-            <td>8</td>
-            <td><strong>Sai sadhan Saravanan</strong> <br />Assistant Professor <br /> Master of Science in Information Systems Management, <br></br>Computer Networks</td>
+            <td>6</td>
+            <td><strong>Sai Sadhan Saravanan</strong> <br />Assistant Professor <br /> Master of Science in Information Systems Management, <br></br>Computer Networks</td>
             <td>saisadhan98@gmail.com</td>
             <td>Arizona State University,Arizona State,USA</td>
             <td>USA</td>
@@ -119,19 +119,19 @@ function TableComponent() {
             <td>AFRICA</td>
           </tr> */}
           <tr>
-            <td>9</td>
+            <td>7</td>
             <td><strong>Dr. R. Raman </strong> <br />Professor , Department of ECE<br></br> RF MEMS & Antennas </td>
             <td>ramanphdr@gmail.com</td>
             <td>Aditya College of Engineering and Technology <br></br>Surampalem Kakinada<br></br>Andhra Pradesh  </td>
             <td>INDIA</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>10</td>
             <td><strong>Sucheta Guruprasad</strong> <br />Associate Professor<br></br>Msc(Microelectronics and Microsystems) </td>
             <td>sucheta.guruprasad@tuhh.de</td>
             <td>Hamburg University of Technology <br></br>Surampalem Kakinada<br></br>Hamburg</td>
             <td>Germany</td>
-          </tr>
+          </tr> */}
           
           {/* <tr>
             <td>17</td>
