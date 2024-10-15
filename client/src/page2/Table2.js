@@ -18,15 +18,18 @@ function TableComponent() {
         <tbody>
         <tr>
             <td>1</td>
-            <td><strong>Dr. G. S. Uthayakumar</strong> <br />Associate Professor <br />Biomedical Optical Engineering</td>
+            <td><strong>Dr. G. S. Uthayakumar </strong><br></br><a href='https://stjosephstechnology.ac.in/web/ece/uthaya.php' class="text-red-500" target='_blank'>Profile Link</a>
+            <br />Associate Professor <br />Biomedical Optical Engineering</td>
             <td>uthayakumar.g.1969@ieee.org</td>
             <td>Department of Electronics and Communication Engineering, <br />St. Joseph's Institute of Technology, OMR, Chennai - 600119</td>
             <td>INDIA</td>
           </tr>
           <tr>
             <td>2</td>
-            <td><strong>Dr. J. Martin Leo Manickam</strong> <br />Professor <br />Wireless Communication</td>
-            <td>josephmartin74@gmail.com</td>
+            <td><strong>Dr. J. Martin Leo Manickam</strong>
+            <br></br><a href='https://stjosephs.ac.in/departmentsite/ECE-%20Website/staff.html ' class="text-red-500" target='_blank'>Profile Link</a>
+             <br />Professor <br />Wireless Communication</td>
+            <td>martinleomanickamj@stjosephs.ac.in</td>
             <td>Department of Electronics and Communication Engineering, <br />St. Joseph's College of Engineering, OMR, Chennai - 600119</td>
             <td>INDIA</td>
           </tr>
@@ -44,12 +47,15 @@ function TableComponent() {
             <td>Saveetha School of Engineering, <br />SIMATS</td>
             <td>INDIA</td>
           </tr> */}
-          <tr>
+          <tr>    
             <td>3</td>
-            <td><strong>Dr. Shirley Selvan </strong> <br />Associate Professor<br></br>Machine Learning techniques, Medical Imaging,<br></br> Pattern Recognition
+            <td><strong>Dr. Shirley Selvan </strong>
+            <br></br><a href='https://stjosephs.ac.in/departmentsite/ECE-%20Website/staff.html' class="text-red-500" target='_blank'>Profile Link</a>
+             <br />Associate Professor<br></br>Machine Learning techniques, Medical Imaging,<br></br> Pattern Recognition
             </td>
-            <td>shirleycharlethenry@gmail.com</td>
-            <td>St Joseph's college of engineering,<br></br> OMR, Chennai -600119	</td>
+            <td>shirleyselvan@stjosephs.ac.in </td>
+            <td>Department of Electronics and Communication Engineering<br></br>
+            St Joseph's college of engineering,<br></br> OMR, Chennai -600119	</td>
             <td>INDIA</td>
           </tr>
           
@@ -60,19 +66,23 @@ function TableComponent() {
             <td>SRM Institute of Science & Technology, <br />SRM Nagar, Kattankulathur - 603203</td>
             <td>INDIA</td>
           </tr> */}
-          {/* <tr>
-            <td>5</td>
-            <td><strong>Dr. S. Tephillah</strong> <br />Associate Professor <br />Cognitive Radio Networks and Machine Learning</td>
-            <td>tephisam@gmail.com<br></br></td>
-            <td>Department of Electronics and Communication Engineering, <br />St. Joseph's Institute of Technology, OMR, Chennai - 600119</td>
-            <td>INDIA</td>
-          </tr> */}
           <tr>
             <td>4</td>
-            <td><strong>Dr. M. Senthil Murugan</strong> <br /> Associate Professor<br></br>Cryptography, Network Security</td>
-            <td>senthilmuruganap@gmail.com</td>
+            <td><strong>Dr. S. Tephillah</strong>
+            <br></br><a href='https://www.stjosephstechnology.ac.in/web/ece/teph.php' class="text-red-500" target='_blank'>Profile Link</a>
+             <br />Associate Professor <br />Cognitive Radio Networks and Machine Learning</td>
+            <td>tephillahs@stjosephstechnology.ac.in <br></br></td>
+            <td>Department of Electronics and Communication Engineering, <br />St. Joseph's Institute of Technology, OMR, Chennai - 600119</td>
+            <td>INDIA</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>Dr. M. Senthil Murugan</strong>
+            <br></br><a href='https://www.stjosephstechnology.ac.in/web/ece/senthil.php' class="text-red-500" target='_blank'>Profile Link</a>
+             <br /> Associate Professor<br></br>Cryptography, Network Security</td>
+            <td>senthilmuruganm@stjosephstechnology.ac.in</td>
             
-            <td>St.Joseph's Institute of Technology, OMR, Chennai -600119</td>
+            <td>Department of Electronics and Communication Engineering <br></br>St.Joseph's Institute of Technology, OMR, Chennai -600119</td>
             <td>INDIA</td>
           </tr>
           {/* <tr>
@@ -83,8 +93,10 @@ function TableComponent() {
             <td>INDIA</td>
           </tr> */}
           <tr>
-            <td>5</td>
-            <td><strong>Dr. K. Vijayalakshmi</strong> <br />Assistant Professor</td>
+            <td>6</td>
+            <td><strong>Dr. K. Vijayalakshmi</strong>
+            <br></br><a href='https://www.srmist.edu.in/faculty/dr-k-vijayalakshmi/' class="text-red-500" target='_blank'>Profile Link</a>
+             <br />Assistant Professor <br></br> Wireless Sensor networks<br></br>Machine Learning and Big data.</td>
             <td>vijaylak@srmist.edu.in</td>
             <td>Department of Computational Intelligence, <br />School of Computing, College of Engineering and Technology, <br />SRM Institute of Science and Technology, Kattankulathur, <br></br>Chennai - 603203</td>
             <td>INDIA</td>
@@ -103,13 +115,13 @@ function TableComponent() {
             <td>Saveetha University</td>
             <td>INDIA</td>
           </tr> */}
-          <tr>
+          {/* <tr>
             <td>6</td>
             <td><strong>Sai Sadhan Saravanan</strong> <br />Assistant Professor <br /> Master of Science in Information Systems Management, <br></br>Computer Networks</td>
             <td>saisadhan98@gmail.com</td>
             <td>Arizona State University,Arizona State,USA</td>
             <td>USA</td>
-          </tr>
+          </tr> */}
          
           {/* <tr>
             <td>13</td>
@@ -120,9 +132,11 @@ function TableComponent() {
           </tr> */}
           <tr>
             <td>7</td>
-            <td><strong>Dr. R. Raman </strong> <br />Professor , Department of ECE<br></br> RF MEMS & Antennas </td>
-            <td>ramanphdr@gmail.com</td>
-            <td>Aditya College of Engineering and Technology <br></br>Surampalem Kakinada<br></br>Andhra Pradesh  </td>
+            <td><strong>Dr. R. Raman </strong> 
+            <br></br><a href='https://acoe.edu.in/acoe/profile_link/4.%20R.RAMAN.pdf' class="text-red-500" target='_blank'>Profile Link</a>
+            <br />Professor<br></br> RF MEMS & Antennas </td>
+            <td>raman_r@acet.ac.in</td>
+            <td>Department of ECE<br></br>Aditya College of Engineering and Technology <br></br>Surampalem Kakinada<br></br>Andhra Pradesh  </td>
             <td>INDIA</td>
           </tr>
           {/* <tr>
@@ -141,6 +155,28 @@ function TableComponent() {
             <td>Siemens Healthineers<br></br>  Hansen Way, Palo Alto, California- 94304</td>
             <td>USA</td>
           </tr> */}
+          <tr> 
+            <td>8</td>
+            <td><strong>Dr. Ananth Bharadwaj</strong> 
+            <br></br><a href='https://www.bits-pilani.ac.in/dr-ananth-bharadhwaj' class="text-red-500" target='_blank'>Profile Link</a>
+            <br />Assistant Professor<br></br>Electric Vehicles,<br></br>Electromagnetics, Near-field Antennas,<br></br> Wireless Power Charging
+            </td>
+            <td>ananth@dubai.bits-pilani.ac.in</td>
+            <td> Department of Electrical and Electronics Engineering<br></br>Birla Institute of Technology & Science <br></br> Pilani, Dubai Campus,<br></br>Dubai International Academic City,<br></br>Dubai</td>            
+            <td>UAE</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><strong>Dr. R. Elakkiya</strong> 
+            <br></br><a href='https://www.bits-pilani.ac.in/dubai/elakkiya-r/' class="text-red-500" target='_blank'>Profile Link</a>
+            <br /> Assistant Professor<br></br>AI, ML NLP<br></br>Data Science<br></br>Deep Learning & Computer Vision 
+            </td>
+            <td>elakkiya@dubai.bits-pilani.ac.in</td>
+            <td>Department of Computer Science<br></br>Birla Institute of Technology & Science <br></br> Pilani, Dubai Campus,<br></br>Dubai International Academic City,<br></br>Dubai</td>
+            <td>UAE</td>
+          </tr>
+  
+
          
         </tbody>
       </table>

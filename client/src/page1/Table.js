@@ -5,7 +5,7 @@ function Table() {
   return (
     <div className={HomeCss.tableBox}> 
       <h2>Areas Covered</h2>
-      <p>Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA) is a scholarly peer-reviewed international scientific journal published Quarterly every year, focusing on theories, methods, and applications in communication and Biomedical Engineering  with Computer Science Engineering.</p>
+      <p>Journal for Communication and Biomedical Engineering with Computer Applications (JCBECA) is a scholarly peer-reviewed international scientific journal published triannually every year, focusing on theories, methods, and applications in communication and Biomedical Engineering  with Computer Science Engineering.</p>
       <p>In the fields of Communication, Biomedical Engineering along with Computer Science, JCBECA offers a dynamic platform for researchers, industry experts, engineers, managers, and policymakers to contribute and share pioneering work.</p>
       
       <table className={HomeCss.tableStyle}> 
