@@ -11,10 +11,10 @@ import Button from '../EthicalsFolder/Button'
 const Page2 = () => {
   return (
     <div>
-    <Header2 />
-    <EditorDesk />
-    <Button />
-    <ChiefEditor />
+      <Header2 />
+      <EditorDesk />
+      <Button />
+      <ChiefEditor />
       <TableComponent />
       <Button />
       <JoinBox />

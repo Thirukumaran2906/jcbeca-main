@@ -12,9 +12,8 @@ const DocIframe = () => {
     return <p className="text-center text-red-500">No PDF available</p>;
   }
 
-  // Function to handle closing or navigating back
   const handleClose = () => {
-    navigate(-1); // Go back to the previous page
+    navigate(-1);
   };
 
   // Function to toggle full screen mode

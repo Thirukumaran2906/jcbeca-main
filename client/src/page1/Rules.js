@@ -7,11 +7,11 @@ const Rules = () => {
       <div className={styles.box}>
         <h2 className={styles.heading}>Journal Information</h2>
         <p>
-        <strong>Publisher:</strong> JKRMS Publications
-        <br></br>
-        <strong>Chief Editor:</strong> Dr. M. V. Karthikeyan
+          <strong>Publisher:</strong> JKRMS Publications
+          <br></br>
+          <strong>Chief Editor:</strong> Dr. M. V. Karthikeyan
           <br />
-          <strong>ISSN:</strong> XXXX:XXXX
+          <strong>ISSN:</strong> 3048-9695(Online)
           <br />
           <strong>DOI: </strong>XXXXXXXXX
           <br /><br />
@@ -38,8 +38,8 @@ const Rules = () => {
           <br />
           <strong>Submission Deadline:</strong> There is no fixed deadline for paper submissions. Manuscripts are accepted year-round.
           <br />
-          
-          
+
+
           <strong>Year of Starting:</strong> 2024
           <br />
           <strong>Copyright:</strong> JKRMS Publications

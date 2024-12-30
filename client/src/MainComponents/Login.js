@@ -46,8 +46,8 @@ const Login = () => {
 
   return (
     <div style={{ position: 'relative', padding: '20px' }}>
-      <button 
-        onClick={() => setShowViewPaperAdmin(!showViewPaperAdmin)} 
+      <button
+        onClick={() => setShowViewPaperAdmin(!showViewPaperAdmin)}
         style={{
           position: 'absolute',
           top: '10px',
@@ -64,7 +64,7 @@ const Login = () => {
       {isLoggedIn ? (
         showViewPaperAdmin ? <ViewPapersAdmin /> : <UploadForm />
       ) : (
-        <div style={{ marginTop: '50px', color :'black' }}>
+        <div style={{ marginTop: '50px', color: 'black' }}>
           <form onSubmit={handleLogin}>
             <div style={{ marginBottom: '15px' }}>
               <label style={{ display: 'block', marginBottom: '5px' }}>Email:</label>
@@ -86,8 +86,8 @@ const Login = () => {
                 required
               />
             </div>
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               style={{
                 backgroundColor: 'darkred',
                 color: 'white',

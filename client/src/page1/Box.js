@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeCss from './style.module.css';
-import img from '../images/jcbeca-cover.png';
+import img from '../images/jcbeca-cover-page.png';
 
 function Box() {
   return (

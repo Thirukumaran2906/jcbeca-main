@@ -87,7 +87,7 @@ const UploadForm = () => {
 
   useEffect(() => {
     // Cleanup if necessary
-    return () => {};
+    return () => { };
   }, []);
 
   return (

@@ -13,11 +13,11 @@ const SubmissionForm = () => {
     application: '',
     paperType: '',
     filename: '',
-    author: { 
-      name: '', 
-      email: '', 
-      department: '', 
-      institution: '', 
+    author: {
+      name: '',
+      email: '',
+      department: '',
+      institution: '',
       country: '',
       contactNo: '',
       state: ''
@@ -78,12 +78,12 @@ const SubmissionForm = () => {
 
       const signedUrl = response.data.signedURL;
       try {
-         await axios.put(signedUrl, file, {
+        await axios.put(signedUrl, file, {
           headers: {
             'Content-Type': 'application/octet-stream'
           }
         });
-        
+
         setIsThankYouVisible(true);
         const To = formDataToSend.author.email;
         await axios.post('https://jcbeca.com/api/user/upload/response-email-user', { To, uuid });
@@ -107,11 +107,11 @@ const SubmissionForm = () => {
       application: '',
       paperType: '',
       filename: '',
-      author: { 
-        name: '', 
-        email: '', 
-        department: '', 
-        institution: '', 
+      author: {
+        name: '',
+        email: '',
+        department: '',
+        institution: '',
         country: '',
         contactNo: '',
         state: ''
@@ -170,165 +170,165 @@ const SubmissionForm = () => {
       )}
 
       {!isPopupVisible && !isThankYouVisible && (
-        <div><div style={{ 
-  display: 'flex', 
-  justifyContent: 'center', 
-  alignItems: 'center', 
-  marginBottom: '20px',
-  padding: '10px',
-  borderRadius: '10px',
-  gap: '10px',
-  flexDirection: window.innerWidth <= 768 ? 'column' : 'row', // Responsive handling
-}}>
-  <button 
-    onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA_ARTICEL_TEMPLATE.docx'} 
-    style={{ 
-      padding: '10px 20px', 
-      backgroundColor: 'red', 
-      color: '#fff', 
-      border: 'none', 
-      borderRadius: '5px',
-      cursor: 'pointer',
-      width: '100%'
-    }}
-  >
-  Paper Format
-  </button>
-  
-  <button 
-    onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA+copy+right+transfer+form.docx'} 
-    style={{ 
-      padding: '10px 20px', 
-      backgroundColor: 'red', 
-      color: '#fff', 
-      border: 'none', 
-      borderRadius: '5px',
-      cursor: 'pointer',
-      width: '100%'
-    }}
-  >
-    Copyright Form
-  </button>
-</div>
-        <form className={formCSS.submission_form} onSubmit={handleSubmit}>
-          <h2>Manuscript Submission Form</h2>
-
-          <label>Submission Type*</label>
-          <select name="submissionType" value={formData.submissionType} onChange={handleChange} required>
-            <option value="">Select...</option>
-            <option value="new">New submission</option>
-            <option value="revised">Revised submission</option>
-            <option value="final">Final copy</option>
-          </select>
-
-          <label>Title</label>
-          <input type="text" name="title" value={formData.title} onChange={handleChange} required placeholder='Example : Image Classification'/>
-
-          <label>Abstract</label>
-          <textarea name="abstract" value={formData.abstract} onChange={handleChange} required ></textarea>
-
-          <label>Keywords</label>
-          <input type="text" name="keywords" value={formData.keywords} onChange={handleChange} required placeholder='Example : Cloud Computing'/>
-
-          <label>Research Area</label>
-          <select name="researchArea" value={formData.researchArea} onChange={handleChange} required>
-            <option value="">Select...</option>
-            <option value="communication">Communication</option>
-            <option value="biomedical">Biomedical</option>
-            <option value="computer">Computer</option>
-          </select>
-
-          <label>Application</label>
-          <input type="text" name="application" value={formData.application} onChange={handleChange} required placeholder='Example : Healthcare'/>
-
-          <label>Paper Type</label>
-          <select name="paperType" value={formData.paperType} onChange={handleChange} required>
-            <option value="">Select...</option>
-            <option value="research">Research article</option>
-            <option value="review">Review article</option>
-            <option value="survey">Survey article</option>
-            <option value="short">Short communication</option>
-            <option value="others">Others</option>
-          </select>
-
-          <label> Upload File<span style={{ color: 'red' }}> (.doc, .docx)</span></label>
-          <input type="file" onChange={handleFileChange} required />
-
-
-          <h3>Corresponding Author Details</h3>
-          <div className={formCSS.author_field}>
-            <label>Name*</label>
-            <input
-              type="text"
-              value={formData.author.name}
-              onChange={(e) => handleAuthorChange('name', e.target.value)}
-              required
-              placeholder='Example : Ramesh'
-            />
-
-            <label>Email*</label>
-            <input
-              type="email"
-              value={formData.author.email}
-              onChange={(e) => handleAuthorChange('email', e.target.value)}
-              required
-              placeholder='Example : abc@gmail.com'
-            />
-            <label>Contact Number*</label>
-            <input
-              type="text"
-              value={formData.author.contactNo}
-              onChange={(e) => handleAuthorChange('contactNo', e.target.value)}
-              required
-              placeholder='Exapmle : 86101 43762'
-            />
-            <label>Department*</label>
-            <input
-              type="text"
-              value={formData.author.department}
-              onChange={(e) => handleAuthorChange('department', e.target.value)}
-              required
-              placeholder='Example : Information Technology'
-            />
-            <label>Institution*</label>
-            <input
-              type="text"
-              value={formData.author.institution}
-              onChange={(e) => handleAuthorChange('institution', e.target.value)}
-              required
-              placeholder='Example : XYZ University'
-            />
-            <label>State*</label>
-            <input
-              type="text"
-              value={formData.author.state}
-              onChange={(e) => handleAuthorChange('state', e.target.value)}
-              required
-              placeholder='Example : Tamil Nadu'
-            />
-            <label>Country*</label>
-            <input
-              type="text"
-              value={formData.author.country}
-              onChange={(e) => handleAuthorChange('country', e.target.value)}
-              required
-              placeholder='Exapmle : India'
-            />
-            
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <button type="submit" disabled={isButtonDisabled} style={{
-              padding: '10px 90px',
-              backgroundColor: 'green',
+        <div><div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: '20px',
+          padding: '10px',
+          borderRadius: '10px',
+          gap: '10px',
+          flexDirection: window.innerWidth <= 768 ? 'column' : 'row', // Responsive handling
+        }}>
+          <button
+            onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA_ARTICEL_TEMPLATE.docx'}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: 'red',
               color: '#fff',
               border: 'none',
               borderRadius: '5px',
-              cursor: 'pointer'
-            }}>
-              {isButtonDisabled ? 'Submitting...' : 'Submit'}
-            </button>
-          </div>
-        </form>
+              cursor: 'pointer',
+              width: '100%'
+            }}
+          >
+            Paper Format
+          </button>
+
+          <button
+            onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA+copy+right+transfer+form.docx'}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: 'red',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              width: '100%'
+            }}
+          >
+            Copyright Form
+          </button>
+        </div>
+          <form className={formCSS.submission_form} onSubmit={handleSubmit}>
+            <h2>Manuscript Submission Form</h2>
+
+            <label>Submission Type*</label>
+            <select name="submissionType" value={formData.submissionType} onChange={handleChange} required>
+              <option value="">Select...</option>
+              <option value="new">New submission</option>
+              <option value="revised">Revised submission</option>
+              <option value="final">Final copy</option>
+            </select>
+
+            <label>Title</label>
+            <input type="text" name="title" value={formData.title} onChange={handleChange} required placeholder='Example : Image Classification' />
+
+            <label>Abstract</label>
+            <textarea name="abstract" value={formData.abstract} onChange={handleChange} required ></textarea>
+
+            <label>Keywords</label>
+            <input type="text" name="keywords" value={formData.keywords} onChange={handleChange} required placeholder='Example : Cloud Computing' />
+
+            <label>Research Area</label>
+            <select name="researchArea" value={formData.researchArea} onChange={handleChange} required>
+              <option value="">Select...</option>
+              <option value="communication">Communication</option>
+              <option value="biomedical">Biomedical</option>
+              <option value="computer">Computer</option>
+            </select>
+
+            <label>Application</label>
+            <input type="text" name="application" value={formData.application} onChange={handleChange} required placeholder='Example : Healthcare' />
+
+            <label>Paper Type</label>
+            <select name="paperType" value={formData.paperType} onChange={handleChange} required>
+              <option value="">Select...</option>
+              <option value="research">Research article</option>
+              <option value="review">Review article</option>
+              <option value="survey">Survey article</option>
+              <option value="short">Short communication</option>
+              <option value="others">Others</option>
+            </select>
+
+            <label> Upload File<span style={{ color: 'red' }}> (.doc, .docx)</span></label>
+            <input type="file" onChange={handleFileChange} required />
+
+
+            <h3>Corresponding Author Details</h3>
+            <div className={formCSS.author_field}>
+              <label>Name*</label>
+              <input
+                type="text"
+                value={formData.author.name}
+                onChange={(e) => handleAuthorChange('name', e.target.value)}
+                required
+                placeholder='Example : Ramesh'
+              />
+
+              <label>Email*</label>
+              <input
+                type="email"
+                value={formData.author.email}
+                onChange={(e) => handleAuthorChange('email', e.target.value)}
+                required
+                placeholder='Example : abc@gmail.com'
+              />
+              <label>Contact Number*</label>
+              <input
+                type="text"
+                value={formData.author.contactNo}
+                onChange={(e) => handleAuthorChange('contactNo', e.target.value)}
+                required
+                placeholder='Exapmle : 86101 43762'
+              />
+              <label>Department*</label>
+              <input
+                type="text"
+                value={formData.author.department}
+                onChange={(e) => handleAuthorChange('department', e.target.value)}
+                required
+                placeholder='Example : Information Technology'
+              />
+              <label>Institution*</label>
+              <input
+                type="text"
+                value={formData.author.institution}
+                onChange={(e) => handleAuthorChange('institution', e.target.value)}
+                required
+                placeholder='Example : XYZ University'
+              />
+              <label>State*</label>
+              <input
+                type="text"
+                value={formData.author.state}
+                onChange={(e) => handleAuthorChange('state', e.target.value)}
+                required
+                placeholder='Example : Tamil Nadu'
+              />
+              <label>Country*</label>
+              <input
+                type="text"
+                value={formData.author.country}
+                onChange={(e) => handleAuthorChange('country', e.target.value)}
+                required
+                placeholder='Exapmle : India'
+              />
+
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+              <button type="submit" disabled={isButtonDisabled} style={{
+                padding: '10px 90px',
+                backgroundColor: 'green',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer'
+              }}>
+                {isButtonDisabled ? 'Submitting...' : 'Submit'}
+              </button>
+            </div>
+          </form>
         </div>
 
       )}

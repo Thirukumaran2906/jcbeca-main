@@ -38,15 +38,15 @@ const ViewPapersAdmin = () => {
               <p className="mb-2"><strong>Country:</strong> {paper.AuthorCountry}</p>
               <p className="mb-2"><strong>Phone:</strong> {paper.ContactNumber}</p>
               <p className="mb-2"><strong>Status:</strong> {paper.Status === 0 ? 'Pending' : 'Approved'}</p>
-              <a 
-                  href={paper.FilePath} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-yellow-400 hover:text-yellow-500 underline"
-                  download
-                >
-                  Download/View Paper
-                </a>
+              <a
+                href={paper.FilePath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-400 hover:text-yellow-500 underline"
+                download
+              >
+                Download/View Paper
+              </a>
             </div>
           ))}
       </div>

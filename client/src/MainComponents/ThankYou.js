@@ -13,13 +13,13 @@ const ThankYou = () => {
     }}>
       <div style={{
         padding: '15px',
-        backgroundColor: '#ffeb3b',  
+        backgroundColor: '#ffeb3b',
         borderRadius: '5px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
         fontSize: '16px',
         fontWeight: 'normal',
-        color: '#000000',  
-        maxWidth: '300px',  
+        color: '#000000',
+        maxWidth: '300px',
         width: '100%',
         textAlign: 'center'
       }}>

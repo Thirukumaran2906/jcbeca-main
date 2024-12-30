@@ -11,7 +11,7 @@ const References = () => {
     
           <section>
             <h2>Journal references</h2>
-            <p>1. Raghavi K, Manesh K, “Title of article”. Title of the Journal, 2011; 27(1): 73-8.ISSN :xxxx xxxx, DOI: 10.4018/978-1-6684-9823-1.ch004</p>
+            <p>1. Raghavi K, Manesh K, “Title of article”. Title of the Journal, 2011; 27(1): 73-8. ISSN: 3048-9695 (Online), DOI: 10.4018/978-1-6684-9823-1.ch004</p>
           </section>
     
           <section>

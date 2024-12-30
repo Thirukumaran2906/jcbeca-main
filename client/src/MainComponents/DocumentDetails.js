@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const DocumentDetails = () => {
@@ -64,20 +64,25 @@ const DocumentDetails = () => {
 
               <p className="text-sm mb-2 text-black">
                 <strong>Pages :</strong>{' '}
-                {document.Pages.toString().length === 3
-                  ? `${document.Pages.toString().substring(0, 1)} - ${document.Pages.toString().substring(1, 3)}`
-                  : `${document.Pages.toString().substring(0, 2)} - ${document.Pages.toString().substring(2, 4)}`}
+                {
+                  document.Pages.toString().length === 3
+                    ? `${document.Pages.toString().substring(0, 1)} - ${document.Pages.toString().substring(1, 3)}`
+                    : document.Pages.toString().length === 5
+                      ? `${document.Pages.toString().substring(0, 2)} -  ${document.Pages.toString().substring(2, 5)}`
+                      : `${document.Pages.toString().substring(0, 2)} - ${document.Pages.toString().substring(2, 4)}`
+                }
+
               </p>
             </div>
 
-           
+
 
             {/* Button to view PDF in new route */}
             <button
               onClick={() => navigate('/volumes/issue/document', { state: { pdfUrl: document.JournalFilePath } })}
               className="block bg-blue-500 text-white text-center py-2 rounded mt-auto hover:bg-blue-600 transition-colors duration-300 ease-in-out"
             >
-              View PDF 
+              View PDF
             </button>
           </div>
         ))}
