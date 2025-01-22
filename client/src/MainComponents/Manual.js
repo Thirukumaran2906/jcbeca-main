@@ -181,7 +181,7 @@ const SubmissionForm = () => {
           flexDirection: window.innerWidth <= 768 ? 'column' : 'row', // Responsive handling
         }}>
           <button
-            onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA_ARTICEL_TEMPLATE.docx'}
+            onClick={() => window.location.href = 'https://user-jcbeca.s3.us-east-1.amazonaws.com/JCBECA_ARTICLE_TEMPLATE.docx'}
             style={{
               padding: '10px 20px',
               backgroundColor: 'red',
@@ -196,7 +196,7 @@ const SubmissionForm = () => {
           </button>
 
           <button
-            onClick={() => window.location.href = 'https://user-jcbeca.s3.amazonaws.com/JCBECA+copy+right+transfer+form.docx'}
+            onClick={() => window.location.href = 'https://user-jcbeca.s3.us-east-1.amazonaws.com/JCBECA_copy_right_transfer_form.docx'}
             style={{
               padding: '10px 20px',
               backgroundColor: 'red',

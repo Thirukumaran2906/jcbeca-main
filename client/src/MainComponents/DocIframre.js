@@ -1,84 +1,102 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { FiX, FiMaximize2, FiMinimize2 } from 'react-icons/fi';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import css from './docIframe.module.css';
 
 const DocIframe = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { pdfUrl } = location.state || {};
-  const [isFullScreen, setIsFullScreen] = React.useState(false);
+  const { PaperId } = useParams();
+  const [submissionData, setSubmissionData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  if (!pdfUrl) {
-    return <p className="text-center text-red-500">No PDF available</p>;
-  }
+  useEffect(() => {
+    const fetchSubmission = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.post('https://jcbeca.com/api/files/getfile', { PaperId });
+        setSubmissionData(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to fetch submission data');
+        setLoading(false);
+      }
+    };
 
-  const handleClose = () => {
-    navigate(-1);
-  };
+    fetchSubmission();
+  }, []);
 
-  // Function to toggle full screen mode
-  const handleFullScreenToggle = () => {
-    const iframeElement = document.querySelector('iframe');
-    if (!isFullScreen) {
-      iframeElement.requestFullscreen();
-    } else {
-      document.exitFullscreen();
+  const handlePreviewClick = () => {
+    const previewElement = document.getElementById('preview');
+    if (previewElement) {
+      previewElement.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsFullScreen(!isFullScreen);
   };
+
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
 
   return (
-    <div className="relative container mx-auto mt-8 px-4">
-      {/* Header with title and buttons */}
-      <div className="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-lg shadow-lg sticky top-0 z-50">
-        <h1 className="text-lg sm:text-2xl font-semibold tracking-wide mb-2 sm:mb-0 text-center">
-          PDF Document Viewer
-        </h1>
-        <div className="flex space-x-2 sm:space-x-4">
-          {/* Fullscreen Toggle Button */}
-          <button
-            onClick={handleFullScreenToggle}
-            className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-3 sm:px-4 rounded-md shadow-md transition-transform transform hover:scale-105 flex items-center text-sm sm:text-base"
-          >
-            {isFullScreen ? (
-              <>
-                <FiMinimize2 className="mr-1 sm:mr-2" /> Exit Fullscreen
-              </>
-            ) : (
-              <>
-                <FiMaximize2 className="mr-1 sm:mr-2" /> Fullscreen
-              </>
+    <div className={css.container}>
+      {submissionData.Status === 1 ? (
+        <div>
+          <div className={css.buttonsContainer}>
+            <button onClick={handlePreviewClick} className={css.previewButton}>Preview and Download</button>
+          </div>
+
+          <div className={css.card}>
+            <div className={css.cardHeader}>
+              <h1>{submissionData.Title?.split('|')[1] || submissionData.Title}</h1>
+            </div>
+            <div className={css.cardBody}>
+              <h3>DOI</h3>
+              {submissionData.Doi && submissionData.Doi.trim() !== "" ? (
+                <p>
+                  <a href={submissionData.Doi} target='_blank' rel="noopener noreferrer">
+                    {submissionData.Doi}
+                  </a>
+                </p>
+              ) : (
+                <p>DOI will be declared soon</p>
+              )}
+            </div>
+
+            <div className={css.cardBody}>
+              <h3>Abstract</h3>
+              <p>{submissionData.Abstract}</p>
+            </div>
+            <div className={css.cardBody}>
+              <h3>Keywords</h3>
+              <p>{submissionData.Keywords}</p>
+            </div>
+            <div className={css.cardBody}>
+              <h3>Author Name</h3>
+              <p>{submissionData.AuthorName}</p>
+            </div>
+            <div className={css.cardBody}>
+              <h3>Author Institution</h3>
+              <p>{submissionData.AuthorInstitution}</p>
+            </div>
+            <div className={css.cardBody}>
+              <h3>State | Country</h3>
+              <p>{submissionData.State}, {submissionData.AuthorCountry}.</p>
+            </div>
+
+            {/* Render FilePath in iframe */}
+            {submissionData.FilePath && (
+              <div className={css.iframeContainer} id='preview'>
+                <h3 className={css.paperPreviewTitle}>Paper Preview and Download</h3>
+                <iframe
+                  src={submissionData.JournalFilePath}
+                  title="Paper Preview"
+                ></iframe>
+              </div>
             )}
-          </button>
-
-          {/* Close Button */}
-          <button
-            onClick={handleClose}
-            className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-3 sm:px-4 rounded-md shadow-md transition-transform transform hover:scale-105 flex items-center text-sm sm:text-base"
-          >
-            <FiX className="mr-1 sm:mr-2" /> Close
-          </button>
+          </div>
         </div>
-      </div>
-
-      {/* PDF Viewer Container */}
-      <div className="relative bg-gray-50 border border-gray-300 rounded-b-lg shadow-lg overflow-hidden mt-4">
-        <iframe
-          src={pdfUrl}
-          width="100%"
-          height="500px"
-          title="PDF Viewer"
-          className="rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-xl sm:h-[800px]"
-        ></iframe>
-      </div>
-
-      {/* Footer for additional information */}
-      <div className="bg-gray-200 text-gray-700 p-4 rounded-b-lg mt-2 text-center shadow-md">
-        <p className="text-sm sm:text-base">
-          Use the Fullscreen option for better viewing experience. You can also
-          return to the previous page using the Close button.
-        </p>
-      </div>
+      ) : (
+        <div>No data available, Please contact us through mail</div>
+      )}
     </div>
   );
 };

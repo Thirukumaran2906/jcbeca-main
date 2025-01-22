@@ -1,3 +1,4 @@
+const { Submission } = require('../models/submission.model');
 const { Upload } = require('../models/volumes.model');
 
 
@@ -18,4 +19,15 @@ const GetAllFiles = async (req, res) => {
     }
 };
 
-module.exports = { GetAllFiles };
+const GetOneFile = async (req, res) => {
+    try {
+        let { PaperId } = req.body;
+        const File = await Submission.findOne({ PaperId });
+        res.status(200).json(File);
+    } catch (error) {
+        console.error('Error fetching files:', error);
+        res.status(500).json({ message: 'Failed to fetch files' });
+    }
+};
+
+module.exports = { GetAllFiles, GetOneFile };

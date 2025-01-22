@@ -37,7 +37,7 @@ function App() {
         <Route path='/contact' element={<ContactUs />} />
         <Route path="/documents/:volumeNumber/:issue" element={<DocumentDetails />} />
         <Route path="/thank" element={<ThankYou />} />
-        <Route path="//volumes/issue/document" element={<DocIframre />} />
+        <Route path="/jcbeca/document/:PaperId" element={<DocIframre />} />
       </Routes>
       </div>
       <Footer />

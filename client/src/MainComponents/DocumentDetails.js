@@ -79,11 +79,16 @@ const DocumentDetails = () => {
 
             {/* Button to view PDF in new route */}
             <button
-              onClick={() => navigate('/volumes/issue/document', { state: { pdfUrl: document.JournalFilePath } })}
+              onClick={() =>
+                navigate(`/jcbeca/document/${document.PaperId}`, {
+                  state: { pdfUrl: document.JournalFilePath },
+                })
+              }
               className="block bg-blue-500 text-white text-center py-2 rounded mt-auto hover:bg-blue-600 transition-colors duration-300 ease-in-out"
             >
-              View PDF
+              View Article
             </button>
+
           </div>
         ))}
       </div>
