@@ -60,7 +60,10 @@ const DocIframe = () => {
                 <p>DOI will be declared soon</p>
               )}
             </div>
-
+            <div className={css.cardBody}>
+              <h3>Volume</h3>
+              <p>{submissionData.Volume}</p>
+            </div>
             <div className={css.cardBody}>
               <h3>Abstract</h3>
               <p>{submissionData.Abstract}</p>
@@ -92,6 +95,15 @@ const DocIframe = () => {
                 ></iframe>
               </div>
             )}
+            <div className={css.cardBody}>
+              <h3>Reference</h3>
+              <p className={css.referencesList}>
+                {submissionData.References.map((data, index) => (
+                  <span key={index}>{data}</span>
+                ))}
+              </p>
+            </div>
+
           </div>
         </div>
       ) : (
