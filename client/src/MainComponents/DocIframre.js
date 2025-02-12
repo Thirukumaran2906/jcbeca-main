@@ -65,6 +65,10 @@ const DocIframe = () => {
               <p>{submissionData.Volume}</p>
             </div>
             <div className={css.cardBody}>
+              <h3>Issue</h3>
+              <p>{submissionData.Issue}</p>
+            </div>
+            <div className={css.cardBody}>
               <h3>Abstract</h3>
               <p>{submissionData.Abstract}</p>
             </div>
