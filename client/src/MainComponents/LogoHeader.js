@@ -30,6 +30,8 @@ const LogoHeader = () => {
             <div className={logoCss.badge}>
                 <div className={logoCss.number}>
                     <h2 className={logoCss.h2}>E-ISSN 3048-9695 (Online)</h2>
+                    <br></br>
+                    <h2 className={logoCss.h2}>DOI: 10.63252</h2>
                     <h3 className={logoCss.h2}>IMPACT FACTOR: 0.00</h3>
                     <p className={logoCss.h2}>{`${day}, ${month} ${dayOfMonth}, ${year} ${time}`}</p>
                 </div>

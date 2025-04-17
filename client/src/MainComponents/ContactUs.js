@@ -28,7 +28,6 @@ export const ContactUs = () => {
               <div className="text-justify">
 
                 JKRMS Publications <br />
-                Dr Karthikeyan M V <br></br>
                 2/297, MADHA KOVIL STREET <br />
                 KELAMBAKKAM, KANCHIPURAM  DISTRICT <br />
                 CHENNAI,

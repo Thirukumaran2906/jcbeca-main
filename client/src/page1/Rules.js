@@ -13,7 +13,7 @@ const Rules = () => {
           <br />
           <strong>ISSN:</strong> 3048-9695(Online)
           <br />
-          <strong>DOI: </strong>XXXXXXXXX
+          <strong>DOI: </strong>10.63252
           <br /><br />
           <strong>Note:</strong>
           <ul style={{ listStyleType: 'disc', paddingInlineStart: '20px' }}>

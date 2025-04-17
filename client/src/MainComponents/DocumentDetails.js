@@ -60,7 +60,16 @@ const DocumentDetails = () => {
             <div className="mt-2 flex-grow">
               <h2 className="text-2xl font-semibold mb-2">{document.Title}</h2>
               <p className="text-sm mb-2 text-black"><strong>Author:</strong> {document.AuthorName}</p>
-              <p className="text-sm mb-2 text-black"><strong>DOI:</strong> N/A</p>
+              <p className="text-sm mb-2 text-black">
+                <strong>DOI:</strong>{' '}
+                <a
+                  href={`https://doi.org/${document.Doi}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {document.Doi}
+                </a>
+              </p>
 
               <p className="text-sm mb-2 text-black">
                 <strong>Pages :</strong>{' '}

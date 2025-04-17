@@ -52,8 +52,11 @@ const DocIframe = () => {
               <h3>DOI</h3>
               {submissionData.Doi && submissionData.Doi.trim() !== "" ? (
                 <p>
-                  <a href={submissionData.Doi} target='_blank' rel="noopener noreferrer">
-                    {submissionData.Doi}
+                  <a
+                    href={`https://doi.org/${submissionData.Doi}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >                    {submissionData.Doi}
                   </a>
                 </p>
               ) : (
