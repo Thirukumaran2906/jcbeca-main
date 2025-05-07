@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0aa1e59c.css",
+    "main.js": "/static/js/main.848b54a0.js",
+    "static/media/jcbeca-cover-page.png": "/static/media/jcbeca-cover-page.f5d42858273743e1e84b.png",
+    "static/media/new-jcbeca-logo.png": "/static/media/new-jcbeca-logo.65664a9dcee836fffc09.png",
+    "static/media/copyright.png": "/static/media/copyright.834e96f061007660da1b.png",
+    "static/media/logo2-jcbeca.png": "/static/media/logo2-jcbeca.4f237bd02a139c11e6b7.png",
+    "index.html": "/index.html",
+    "main.0aa1e59c.css.map": "/static/css/main.0aa1e59c.css.map",
+    "main.848b54a0.js.map": "/static/js/main.848b54a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0aa1e59c.css",
+    "static/js/main.848b54a0.js"
+  ]
+}
