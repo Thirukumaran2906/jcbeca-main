@@ -3,7 +3,8 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 
 const Volumes = () => {
   const volumeData = [
-    { volumeNumber: 1, volumeName: 'JCBECA Volume - 1 (2024)', issues: ['Issue 1 - [MAY - AUGUST]','Issue 2 - [SEPTEMBER  - DECEMBER]'] }
+    { volumeNumber: 1, volumeName: 'JCBECA Volume - 1 (2024)', issues: ['Issue 1 - [MAY - AUGUST]','Issue 2 - [SEPTEMBER  - DECEMBER]'] },
+    { volumeNumber: 2, volumeName: 'JCBECA Volume - 2 (2025)', issues: ['Issue 1 - [January – April]'] }
   ];
 // ['Issue 1', 'Issue 2', 'Isssue 3', 'Issue 4'] 
   const [expandedVolume, setExpandedVolume] = useState(null);
